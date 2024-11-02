@@ -1,0 +1,4 @@
+{{/*  To tell hugo to open links in a new tab and do not let the site you are linking to to know the traffic came from your site  */}}
+<a href="{{ .Destination | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if strings.HasPrefix .Destination "http" }} target="_blank" rel="noreferrer noopener"{{ end }}>
+    {{ .Text }}
+  </a>

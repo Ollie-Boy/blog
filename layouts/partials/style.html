@@ -1,0 +1,213 @@
+<style>
+  @import url(https://fonts.googleapis.com/css?family=Neucha|Patrick+Hand+SC);
+  body {
+    background-image: url('{{ "images/geometry_light.png" | relURL }}');
+    font-family: Neucha, sans-serif;
+    font-size: 1.25rem;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  b {
+    font-family: "Patrick Hand SC", sans-serif;
+    color: #222;
+  }
+
+  th {
+    font-family: "Patrick Hand SC", sans-serif;
+  }
+
+  td {
+    font-family: "Neucha", sans-serif;
+  }
+
+  h1 {
+    font-size: 3rem /* 48px */
+  }
+  h2 {
+    font-size: 2rem /* 32px */
+  }
+  h3 {
+    font-size: 1.75rem /* 28px */
+  }
+  h4 {
+    font-size: 1.5rem /* 20px */
+  }
+  h5 {
+    font-size: 1.25rem /* 16px */
+  }
+  h6 {
+    font-size: .8rem /* 12.8px */
+  }
+  
+  a {
+    color: #3273dc;
+    /*color: #ff5e6c;*/
+  }
+
+  .title {
+    color: #222;
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    font-family: "Neucha", sans-serif;
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    font-size: 1.25rem;
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+  /* blog posts */
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-image: url('{{ "images/geometry_dark.png" | relURL }}');
+      background-color: #333;
+      color: #ddd;
+    }
+
+    .title {
+      color: #ddd;
+      text-decoration: none;
+      border: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
