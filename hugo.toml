@@ -9,6 +9,10 @@ languageCode = "en-US"
 # Enable emoji
 enableEmoji = true
 
+# The built-in RSS template will render the following values, if present, from your site 
+# configuration:
+copyright = 'Copyright © 2024 Li Xiang.'
+
 # Generate a nice robots.txt for SEO
 enableRobotsTXT = true
 
@@ -22,12 +26,6 @@ ignoreErrors = ["error-disable-taxonomy"]
 [params]
   # Sentence you wanna show in the footer
   footer = 'Dear wind, please take me fly'
-
-  # The built-in RSS template will render the following values, if present, from your site 
-  # configuration:
-  [params.author]
-    email = 'shu@lixiang.dev'
-    name = 'Li Xiang' # This will show in the copyright
 
   # The "description" of your website. This is used in the meta data of your generated html.
   description = "I am cool B)"
@@ -58,6 +56,11 @@ ignoreErrors = ["error-disable-taxonomy"]
   # 8601](https://en.wikipedia.org/wiki/ISO_8601) format:
   dateFormat = "02 Jan, 2006"
 
+  # The built-in RSS template will render the following values, if present, from your site 
+  # configuration:
+  [params.author]
+    email = 'shu@lixiang.dev'
+    name = 'Li Xiang' # This will show in the copyright
 # =================================================================================
 # By default, when you build your site, Hugo generates RSS feeds for home, section, 
 # taxonomy, and term pages. Control feed generation in your site configuration. For 
@@ -78,9 +81,7 @@ ignoreErrors = ["error-disable-taxonomy"]
 #   [services.rss]
 #     limit = 42 # Set limit to -1 to generate an unlimited number of items per feed.
 
-# The built-in RSS template will render the following values, if present, from your site 
-# configuration:
-copyright = 'Copyright © 2024 Li Xiang.'
+
 # =================================================================================
 [sitemap]
   # How frequently a page is likely to change. Valid values are always, hourly, daily, weekly, monthly, 

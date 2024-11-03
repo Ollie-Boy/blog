@@ -5,9 +5,8 @@
   <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link href="/images/favicon-dark.png?1730544704" rel="icon" type="image/png" media="(prefers-color-scheme: dark)">
-<link href="/images/favicon-light.ico?1730544704" rel="icon" type="image/x-icon" sizes="any" media="(prefers-color-scheme: light)">
-<link href="/images/favicon-dark.ico?1730544704" rel="icon" type="image/x-icon" sizes="any" media="(prefers-color-scheme: dark)"><title>How to Add a Scroll Button to Your Hugo Site | Li Xiang&#39;s Brain Dump</title>
+<link rel="shortcut icon" href="http://localhost:1313/favicon.ico" />
+<title>How to Add a Scroll Button to Your Hugo Site | Li Xiang&#39;s Brain Dump</title>
 <meta name="title" content="How to Add a Scroll Button to Your Hugo Site" />
 <meta name="description" content="Sample article showcasing how to add a scroll button" />
 <meta name="keywords" content="Hugo,dev," />
@@ -24,11 +23,13 @@
     <meta property="article:modified_time" content="2024-10-31T00:00:00+00:00">
     <meta property="article:tag" content="Hugo">
     <meta property="article:tag" content="Dev">
+    <meta property="og:image" content="http://localhost:1313/images/share.png">
 
 
 
 
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/images/share.png">
   <meta name="twitter:title" content="How to Add a Scroll Button to Your Hugo Site">
   <meta name="twitter:description" content="Sample article showcasing how to add a scroll button">
 
@@ -40,6 +41,7 @@
   <meta itemprop="datePublished" content="2024-10-31T00:00:00+00:00">
   <meta itemprop="dateModified" content="2024-10-31T00:00:00+00:00">
   <meta itemprop="wordCount" content="565">
+  <meta itemprop="image" content="http://localhost:1313/images/share.png">
   <meta itemprop="keywords" content="Hugo,Dev">
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
@@ -58,6 +60,9 @@
     overflow-wrap: break-word;
     line-height: 1.5;
     color: #444;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
 
   h1,
@@ -172,7 +177,8 @@
   }
 
   footer {
-    padding: 25px;
+    margin-top: auto;
+    padding: 15px;
     text-align: center;
   }
 
