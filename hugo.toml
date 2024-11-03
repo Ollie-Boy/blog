@@ -95,6 +95,7 @@ ignoreErrors = ["error-disable-taxonomy"]
   # the default value of -1 Hugo will omit this field from the sitemap.
   priority = -1
 
+# This is the default configuration for the Goldmark Markdown renderer.
 [markup]
   [markup.goldmark]
     duplicateResourceFiles = false
@@ -155,3 +156,6 @@ ignoreErrors = ["error-disable-taxonomy"]
       hardWraps = false
       unsafe = true
       xhtml = false
+  [markup.highlight]
+    lineNos = true
+    lineNumbersInTable = false
