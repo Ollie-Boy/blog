@@ -9,7 +9,7 @@ Hello and welcome to my brain dump. Quite messy here — incoherence, inconsiste
 
 **Below is about me**
 
-Hello, this is *Li Xiang* aka *Shu*, friends also call me *juju*. 
+Hello, this is *Li Xiang* aka *Shu*, friends also call me *juju*.<img src="/images/bird.png" alt="me now" width="80" align="left"/>
 
 Pronouns: He/Him ~~(Attack Helicopter)~~.
 
@@ -27,3 +27,8 @@ to ask Aunt Google how to start.
 4. Gotta say, there should be a fourth one and yes it is [Go](https://go.dev). I am planning to learn it because I wanna create my own hugo theme. There are lots of themes and every one of them is good, but barely one of them catches my eye. The papercss hugo theme I use now still lacks something that only exists in my brain, lol.
 
 Back to me, I am still a student, shy so prefer to typewrite. Minecraft ign is *MeWannaFly* ~~(yes, IWannaFly is occupied)~~. I also run another webpage: [WindTavern](https://windtavern.com "A Tavern But Only Offer Milk."), I use it to put stories and books, go and take a look if you want. :p
+
+Btw,<img src="/images/chick.png" alt="young me" width="80" align="right"/>
+
+This is me when I was young. -->
+
