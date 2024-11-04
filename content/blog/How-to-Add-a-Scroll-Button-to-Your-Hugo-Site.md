@@ -1,6 +1,6 @@
 +++
 title = "How to Add a Scroll Button to Your Hugo Site"
-date = 2024-10-31
+date = "2024-10-31"
 description = "Sample article showcasing how to add a scroll button"
 tags = [
     "Hugo",
