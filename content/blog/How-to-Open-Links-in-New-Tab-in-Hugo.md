@@ -10,7 +10,7 @@ tags = ["hugo",
 This is a page about »How to Open Links in New Tab in Your Hugo Site«.
 
 I wanted hugo to open external links in new tabs but after several trials, I failed. What I tried are:
-1. HTML 
+1. HTML
 ```html
 <a href="https://example.com/" target="_blank">This is an example!</a>
 ```
@@ -25,6 +25,7 @@ And then, I find [this](https://discourse.gohugo.io/t/how-to-open-link-in-new-ta
 I'll just show how to do it directly, you can go to learn more if you have interest.
 
 1. Create `render-link.html` in `../layouts/_default/_markup`.
+
 2. Copy and paste in it.
 ```go
 {{/*  To tell hugo to open links in a new tab and do not let the site you are linking to to know the traffic came from your site  */}}
@@ -34,7 +35,7 @@ I'll just show how to do it directly, you can go to learn more if you have inter
 ```
 3. All finished, just build your site and enjoy.
 
-**Update:** You can simply set `[markup.goldmark.renderer.unsafe] = true` in your config.toml.
+**Update:** You can simply set `[markup.goldmark.renderer.unsafe] = true` in your `config.toml`, then go to 1.HTML.
 
 {{< highlight toml "hl_lines=60" >}}
 # This is the default configuration for the Goldmark Markdown renderer:

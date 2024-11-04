@@ -40,7 +40,7 @@
   <meta itemprop="description" content="This will show you how to open in new tab if you use hugo">
   <meta itemprop="datePublished" content="2024-11-02T00:00:00+00:00">
   <meta itemprop="dateModified" content="2024-11-02T00:00:00+00:00">
-  <meta itemprop="wordCount" content="380">
+  <meta itemprop="wordCount" content="384">
   <meta itemprop="image" content="http://localhost:1313/images/bird.png">
   <meta itemprop="keywords" content="Hugo,Dev">
 <meta name="referrer" content="no-referrer-when-downgrade" />
@@ -63,6 +63,44 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
+  }
+
+  .paragraph-with-sidenote {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+     
+  width: calc(720px + (100vw - 720px)/2.1);
+  }
+
+  .sidenote-paragraph {
+    padding-right: 1rem;
+    width: 720px;
+  }
+
+  .sidenote-box {
+    width: calc((100vw - 720px)/3);
+  }
+
+  .sidenote-note {
+    background-color: transparent;
+    border: solid 1px #f1d4d4;
+    border-radius: 10px;
+    box-sizing: content-box;
+    padding: 0.8rem;
+  }
+
+   
+  @media screen and (max-width: 1000px) {
+  .paragraph-with-sidenote {
+    width: 100%;
+    }
+
+  .sidenote-box {
+    width: 100%;
+    }
   }
 
   h1,
@@ -259,9 +297,18 @@
     .helptext {
       color: #aaa;
     }
+
+    .sidenote-note {
+      background-color: transparent;
+      border: solid 1px;
+      border-radius: 10px;
+      box-sizing: content-box;
+      padding: 0.8rem;
+    }
   }
 
 </style>
+
 
 </head>
 
@@ -309,8 +356,12 @@
   </a> which saves my life.
 I&rsquo;ll just show how to do it directly, you can go to learn more if you have interest.</p>
 <ol>
-<li>Create <code>render-link.html</code> in <code>../layouts/_default/_markup</code>.</li>
-<li>Copy and paste in it.</li>
+<li>
+<p>Create <code>render-link.html</code> in <code>../layouts/_default/_markup</code>.</p>
+</li>
+<li>
+<p>Copy and paste in it.</p>
+</li>
 </ol>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>{{<span style="color:#75715e">/*  To tell hugo to open links in a new tab and do not let the site you are linking to to know the traffic came from your site  */</span>}}
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>&lt;<span style="color:#a6e22e">a</span> <span style="color:#a6e22e">href</span>=<span style="color:#e6db74">&#34;{{ .Destination | safeURL }}&#34;</span>{{ <span style="color:#a6e22e">with</span> .<span style="color:#a6e22e">Title</span>}} <span style="color:#a6e22e">title</span>=<span style="color:#e6db74">&#34;{{ . }}&#34;</span>{{ <span style="color:#a6e22e">end</span> }}{{ <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">HasPrefix</span> .<span style="color:#a6e22e">Destination</span> <span style="color:#e6db74">&#34;http&#34;</span> }} <span style="color:#a6e22e">target</span>=<span style="color:#e6db74">&#34;_blank&#34;</span> <span style="color:#a6e22e">rel</span>=<span style="color:#e6db74">&#34;noreferrer noopener&#34;</span>{{ <span style="color:#a6e22e">end</span> }}&gt;
@@ -319,7 +370,7 @@ I&rsquo;ll just show how to do it directly, you can go to learn more if you have
 </span></span></code></pre></div><ol start="3">
 <li>All finished, just build your site and enjoy.</li>
 </ol>
-<p><strong>Update:</strong> You can simply set <code>[markup.goldmark.renderer.unsafe] = true</code> in your config.toml.</p>
+<p><strong>Update:</strong> You can simply set <code>[markup.goldmark.renderer.unsafe] = true</code> in your <code>config.toml</code>, then go to 1.HTML.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#75715e"># This is the default configuration for the Goldmark Markdown renderer:</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>[<span style="color:#a6e22e">markup</span>]
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>  [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>]

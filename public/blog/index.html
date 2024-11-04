@@ -59,6 +59,44 @@
     flex-direction: column;
   }
 
+  .paragraph-with-sidenote {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+     
+  width: calc(720px + (100vw - 720px)/2.1);
+  }
+
+  .sidenote-paragraph {
+    padding-right: 1rem;
+    width: 720px;
+  }
+
+  .sidenote-box {
+    width: calc((100vw - 720px)/3);
+  }
+
+  .sidenote-note {
+    background-color: transparent;
+    border: solid 1px #f1d4d4;
+    border-radius: 10px;
+    box-sizing: content-box;
+    padding: 0.8rem;
+  }
+
+   
+  @media screen and (max-width: 1000px) {
+  .paragraph-with-sidenote {
+    width: 100%;
+    }
+
+  .sidenote-box {
+    width: 100%;
+    }
+  }
+
   h1,
   h2,
   h3,
@@ -253,9 +291,18 @@
     .helptext {
       color: #aaa;
     }
+
+    .sidenote-note {
+      background-color: transparent;
+      border: solid 1px;
+      border-radius: 10px;
+      box-sizing: content-box;
+      padding: 0.8rem;
+    }
   }
 
 </style>
+
 
 </head>
 
