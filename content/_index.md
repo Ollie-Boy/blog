@@ -9,7 +9,12 @@ Hello and welcome to my brain dump. Quite messy here — incoherence, inconsiste
 
 **Below is about me**
 
-Hello, this is *Li Xiang* aka *Shu*, friends also call me *juju*.<img class="data-zoomable" src="/images/bird.png" alt="me now" width="80" height="80" align="left"/>
+Hello, this is *Li Xiang* aka *Shu*, friends also call me *juju*.
+{{< sidenote `
+<img src="/images/bird.png" alt="me now" width="80" height="80" align="left"/>
+` left >}}
+Gorgeous, delightful, fantastic, elegant, handsome, ~~cute~~ me.
+{{< /sidenote >}}
 
 Pronouns: He/Him ~~(Attack Helicopter)~~.
 
@@ -30,7 +35,8 @@ and integrate systems more effectively."). I read some articles and [this](https
 
 Back to me, I am still a student, shy so prefer to typewrite. Minecraft ign is *MeWannaFly* ~~(yes, IWannaFly is occupied)~~. I also run another webpage: [WindTavern](https://windtavern.com "A Tavern But Only Offer Milk."), I use it to put stories and books, go and take a look if you want. :p
 
-Btw,<img src="/images/chick.png" alt="young me" width="80" height="80" align="right"/>
-
-This is me when I was young. -->
-
+{{< sidenote `
+<img src="/images/chick.png" alt="young me" width="80" height="80" align="right"/>
+`>}}
+Btw, this is me when I was young.
+{{< /sidenote >}}
