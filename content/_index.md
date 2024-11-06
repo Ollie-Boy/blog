@@ -11,11 +11,13 @@ Hello and welcome to my brain dump. Quite messy here — incoherence, inconsiste
 
 Hello, this is *Li Xiang* aka *Shu*, friends also call me *juju*.
 {{< sidenote `
-<img src="/images/bird.png" alt="me now" width="80" height="80" align="left"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="/images/bird_dark.png" width="80" height="80" align="left">
+  <img alt="Gorgeous, delightful, fantastic, elegant, handsome, and cute me." src="/images/bird.png" width="80" height="80" align="left">
+</picture>
 ` left >}}
 Gorgeous, delightful, fantastic, elegant, handsome, ~~cute~~ me.
-{{< /sidenote >}}
-
+{{< /sidenote >}}  
 Pronouns: He/Him ~~(Attack Helicopter)~~.
 
 Special thanks to [(go)hugo](https://gohugo.io "The world's fastest framework for building websites") and [Jan Raasch](https://www.janraasch.com/)'s [bearblog](https://bearblog.dev/ "A privacy-first, no-nonsense, super-fast blogging platform"). Won't have this without all of you.
@@ -36,7 +38,10 @@ and integrate systems more effectively."). I read some articles and [this](https
 Back to me, I am still a student, shy so prefer to typewrite. Minecraft ign is *MeWannaFly* ~~(yes, IWannaFly is occupied)~~. I also run another webpage: [WindTavern](https://windtavern.com "A Tavern But Only Offer Milk."), I use it to put stories and books, go and take a look if you want. :p
 
 {{< sidenote `
-<img src="/images/chick.png" alt="young me" width="80" height="80" align="right"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="/images/chick_dark.png" width="80" height="80" align="left">
+  <img alt="Young me." src="/images/chick.png" width="80" height="80" align="right">
+</picture>
 `>}}
 Btw, this is me when I was young.
 {{< /sidenote >}}

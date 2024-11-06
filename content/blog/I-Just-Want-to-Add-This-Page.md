@@ -8,6 +8,6 @@ tags = ["random"]
 
 {{< sidenote `
 I added this page for no reason or clue, but I just want to do. >:)
-` >}}
+` left >}}
 And this is a lovely sidenote. B)
 {{< /sidenote >}}
