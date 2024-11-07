@@ -1,5 +1,6 @@
 # Hello
 Howdy and welcome. :D
+
 Special thanks to [(go)hugo](https://gohugo.io) and [Jan Raasch](https://www.janraasch.com/)'s [bearblog](https://bearblog.dev/). Won't have this without all of you. :heart:
 
 # Reference
@@ -26,7 +27,11 @@ What I referred to are listed below:
     - https://atharvashah.netlify.app/posts/tech/hugo-shortcodes/
 8. **Emoji:** 
     - https://gohugo.io/quick-reference/emojis/
-9. **Others:**
+9. **Copy to Clipboard Button**: 
+    - https://www.dannyguo.com/blog/how-to-add-copy-to-clipboard-buttons-to-code-blocks-in-hugo/
+    - https://logfetch.com/hugo-add-copy-to-clipboard-button/
+    - https://www.roboleary.net/2022/01/13/copy-code-to-clipboard-blog.html
+10. **Others:**
     - https://stackoverflow.com/
     - https://discourse.gohugo.io/
     - ...
