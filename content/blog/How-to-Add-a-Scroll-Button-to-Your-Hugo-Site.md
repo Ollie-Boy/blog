@@ -11,7 +11,7 @@ author = "Li Xiang"
 
 In this article, I will show how to add a simple Scroll-to-Top button to your webpage.
 
-Vanilla Back To Top is simple and tiny with no dependencies. Hides when on top, scrolls up smoothly when clicked. Works equally great with Vue, React, Angular and without frameworks on Jekyll, Hugo and Hexo
+Vanilla Back To Top is simple and tiny with no dependencies. Hides when on top, scrolls up smoothly when clicked. Works equally great with Vue, React, Angular and without frameworks on Jekyll, Hugo and Hexo.
 
 What we need to do first is go to [vfeskov](https://github.com/vfeskov)'s [vanilla back to top repo](https://github.com/vfeskov/vanilla-back-to-top), there provides 3 ways to use it.
 

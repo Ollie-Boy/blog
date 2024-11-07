@@ -1,2 +1,52 @@
+# If you read this then you are cool, but I am cooler, and the coolest of all. B)
+Sitemap: 
+http://localhost:1313/sitemap.xml
+
 User-Agent: *
-Sitemap: http://localhost:8785/sitemap.xml
+
+# Big bad bots.
+Disallow:  
+User-agent: AI2Bot
+User-agent: Ai2Bot-Dolma
+User-agent: Amazonbot
+User-agent: Applebot
+User-agent: Applebot-Extended
+User-agent: Bytespider
+User-agent: CCBot
+User-agent: ChatGPT-User
+User-agent: Claude-Web
+User-agent: ClaudeBot
+User-agent: Diffbot
+User-agent: DuckAssistBot
+User-agent: FacebookBot
+User-agent: FriendlyCrawler
+User-agent: GPTBot
+User-agent: Google-Extended
+User-agent: GoogleOther
+User-agent: GoogleOther-Image
+User-agent: GoogleOther-Video
+User-agent: ICC-Crawler
+User-agent: ISSCyberRiskCrawler
+User-agent: ImagesiftBot
+User-agent: Kangaroo Bot
+User-agent: Meta-ExternalAgent
+User-agent: Meta-ExternalFetcher
+User-agent: OAI-SearchBot
+User-agent: PerplexityBot
+User-agent: PetalBot
+User-agent: Scrapy
+User-agent: Sidetrade indexer bot
+User-agent: Timpibot
+User-agent: VelenPublicWebCrawler
+User-agent: Webzio-Extended
+User-agent: YouBot
+User-agent: anthropic-ai
+User-agent: cohere-ai
+User-agent: facebookexternalhit
+User-agent: iaskspider/2.0
+User-agent: img2dataset
+User-agent: omgili
+User-agent: omgilibot
+Disallow: /
+
+# Bad bots bundled by https://github.com/ai-robots-txt/ai.robots.txt

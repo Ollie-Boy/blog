@@ -5,7 +5,7 @@ draft = false
 # Set menu to "main" to add this page to the main menu on top of the page
 # menu = "main"
 description = ""
-# tags = [{{ range $plural, $terms := .Site.Taxonomies }}{{ range $term, $val := $terms }}"{{ printf "%s" $term }}",{{ end }}{{ end }}]
+tags = [{{ range $plural, $terms := .Site.Taxonomies }}{{ range $term, $val := $terms }}"{{ printf "%s" $term }}",{{ end }}{{ end }}]
 # [sitemap]
 #   changefreq = 'weekly'
 #   disable = false
