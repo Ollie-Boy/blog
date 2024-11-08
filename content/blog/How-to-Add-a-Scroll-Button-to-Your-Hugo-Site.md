@@ -18,7 +18,7 @@ What we need to do first is go to [vfeskov](https://github.com/vfeskov)'s [vanil
 ## Use the file provide on unpkg.com
 You can find [How to use](https://github.com/vfeskov/vanilla-back-to-top#how-to-use) if you read the README.
 
-Just add below to your Single page templates, for example `../layouts/post/single.html`.
+Just add the below codes to your single page templates, for me, I put it in my footer partials `../layouts/partials/footer.html`.
 
 ```html
 <script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
@@ -34,7 +34,7 @@ You know, sometimes when network is not stable, your button may not show because
 
 So just go to the [page](https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js), copy the code, name it as `vanilla-back-to-top.min.js` and save it in your custom js folder, for example `../static/js/vanilla-back-to-top.min.js`.
 
-Then just like before, add below code in your single page templates `../layouts/post/single.html`.
+Then like before, add the below codes in your single page templates.
 
 ```html
 <script src="/js/vanilla-back-to-top.min.js"></script>
@@ -42,7 +42,7 @@ Then just like before, add below code in your single page templates `../layouts/
 ```
 
 ## With npm
-You can also install the package via npm and import it into your own bundle. Run below code in your hugo project's root folder.
+You can also install the package via npm and import it into your own bundle. Run the below codes in your hugo project's root folder.
 
 ```js
 npm install --save vanilla-back-to-top
@@ -96,19 +96,12 @@ And here is my config, you can see what it looks like at the right-down corner.
 
 ```html
 <script src="/js/vanilla-back-to-top.min.js"></script>
-<script>addBackToTop({
+<script>
+addBackToTop({
   backgroundColor: '#fff',
-//  cornerOffset: 20, // px
-  diameter: 45, // px
-//  ease: inOutSine, // any one from https://www.npmjs.com/package/ease-component will do
-//  id: 'back-to-top',
+  diameter: 45,
   innerHTML: '<svg viewBox="0 0 24 24"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg>',
-//  onClickScrollTo: 0, // px
-//  scrollContainer: document.body, // or a DOM element, e.g., document.getElementById('content')
-  scrollDuration: 777, // ms
-//  showWhenScrollTopIs: 1, // px
-//  size: diameter, // alias for diameter
-  textColor: '#000',
-//  zIndex: 1  */
-  })</script>
+  scrollDuration: 777,
+  })
+</script>
 ```
