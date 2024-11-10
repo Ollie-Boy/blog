@@ -13,7 +13,7 @@ tags = ["hugo","perosonalize"]
 +++
 Since I added some functions here, I think I need to note how to use shortcodes in case of I forget someday.
 # blockquote
-1. Normal quote:
+1. **Normal quote:**
 ```markdown
 {{</* blockquote >}}
   This is a simple quote.
@@ -23,7 +23,7 @@ Since I added some functions here, I think I need to note how to use shortcodes 
   This is a simple quote.
 {{< /blockquote >}}
 
-2. Quote with author:
+2. **Quote with author:**
 ```markdown
 {{</* blockquote author="Li Xiang" >}}
   This is a quote with only an author named Li Xiang.
@@ -33,7 +33,7 @@ Since I added some functions here, I think I need to note how to use shortcodes 
   This is a quote with only an author named Li Xiang.
 {{< /blockquote >}}
 
-3. Quote with author and source:
+3. **Quote with author and source:**
 ```markdown
 {{</* blockquote author="Li Xiang" source="Source" >}}
   This is a quote from Li Xiang and source "source."
@@ -43,7 +43,7 @@ Since I added some functions here, I think I need to note how to use shortcodes 
   This is a quote from Li Xiang and source "source."
 {{< /blockquote >}}
 
-4. Quote with author and link:
+4. **Quote with author and link:**
 ```markdown
 {{</* blockquote author="Li Xiang" link="https://lixiang.dev/usages-for-shortcodes/#blockquote" >}}
   This is a quote from Li Xiang and links to https://lixiang.dev/usages-for-shortcodes/#blockquote.
@@ -53,7 +53,7 @@ Since I added some functions here, I think I need to note how to use shortcodes 
   This is a quote from Li Xiang and links to https://lixiang.dev/usages-for-shortcodes/#blockquote.
 {{< /blockquote >}}
 
-5. Quote with author, link and title:
+5. **Quote with author, link and title:**
 ```markdown
 {{</* blockquote author="Li Xiang" link="https://lixiang.dev/usages-for-shortcodes/#blockquote" title="Usages for Shortcodes" >}}
   This is a quote from Li Xiang and links to https://lixiang.dev/usages-for-shortcodes/#blockquote with title "Usages for Shortcodes".
@@ -92,3 +92,8 @@ Another main content.
 ` left >}}
 And sidenote on the left side. :sunglasses:
 {{< /sidenote >}}
+# audio
+```markdown
+{{</* audio mp3="/audio/Voicy_Happy Happy Happy.mp3" */>}}
+```
+{{< audio mp3="/audio/Voicy_Happy Happy Happy.mp3">}}

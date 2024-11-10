@@ -1,4 +1,5 @@
 <style>
+  @import url(/css/sidenote.css);
   @import url(https://fonts.googleapis.com/css?family=Neucha|Patrick+Hand+SC);
   body {
     background-image: url('{{ "images/geometry_light.png" | relURL }}');
@@ -18,65 +19,6 @@
     flex-direction: column;
     position: relative;
   }
-
-    /*
-    Make sure that your main content container has position: relative;
-    Otherwise your sidenotes may show up in weird places, or even off the side of the screen.
-    In my case, I added position: relative; to my `.post` selector.
-    */
-  .sidenote:hover {
-    background-color: #00BFFF;
-  }
-  .sidenote:hover .sidenote-label {
-    text-decoration: none;
-  }
-  .sidenote:hover .sidenote-content {
-    border: dotted 3px #333;
-  }
-  .sidenote .sidenote-label {
-    text-decoration: #333;
-  }
-  .sidenote-checkbox {
-    display: none;
-  }
-  .sidenote-content {
-    display: block;
-    position: absolute;
-    width: 260px;
-    box-sizing: border-box;
-    margin-top: -3em;
-    border: dotted 2px #333;
-    color: #333;
-    padding: 0.5rem;
-    font-size: 1.25rem;
-  }
-  .sidenote-content.sidenote-right {
-    right: 0;
-    margin-right: -260px;
-  }
-  .sidenote-content.sidenote-left {
-    left: 0;
-    margin-left: -260px;
-  }
-  @media screen and (max-width: 960px) {
-    .sidenote-content {
-      position: static;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      width: 100%;
-      display: none;
-    }
-    .sidenote-checkbox:checked ~ .sidenote-content {
-      display: block;
-    }
-    .sidenote-content.sidenote-right {
-      margin-right: 0px;
-    }
-    .sidenote-content.sidenote-left {
-      margin-left: 0px;
-    }
-  }
-
 
   h1,
   h2,
@@ -249,44 +191,12 @@
       border: 0;
     }
 
-    .sidenote:hover {
-      background-color: #666;
+    th {
+      border: 1px solid #ddd;
     }
-    .sidenote:hover .sidenote-label {
-      text-decoration: none;
-    }
-    .sidenote:hover .sidenote-content {
-      border: dotted 3px #666;
-    }
-    .sidenote-content {
-      display: block;
-      position: absolute;
-      width: 260px;
-      box-sizing: border-box;
-      margin-top: -3em;
-      border: dotted 2px #666;
-      color: #ddd;
-      padding: 0.5rem;
-      font-size: 1.25rem;
-    }
-
-    @media screen and (max-width: 960px) {
-      .sidenote-content {
-        position: static;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        width: 100%;
-        display: none;
-      }
-      .sidenote-checkbox:checked ~ .sidenote-content {
-        display: block;
-      }
-      .sidenote-content.sidenote-right {
-        margin-right: 0px;
-      }
-      .sidenote-content.sidenote-left {
-        margin-left: 0px;
-      }
+  
+    td {
+      border: 1px solid #ddd;
     }
 
     h1,
@@ -325,14 +235,7 @@
     .helptext {
       color: #aaa;
     }
-
-    .sidenote-note {
-      background-color: transparent;
-      border: solid 1px;
-      border-radius: 10px;
-      box-sizing: content-box;
-      padding: 0.8rem;
-    }
+    
   }
 
 </style>
