@@ -26,7 +26,7 @@ ignoreErrors = ["error-disable-taxonomy"]
 
 [params]
   # Sentence you wanna show in the footer
-  footer = 'Dear wind, please take me fly'
+  footer = 'Dear wind, please take [me](mailto:shu@lixiang.dev "Wanna mail to cool me? ٩(^ᗜ^ )و") fly'
 
   # The "description" of your website. This is used in the meta data of your generated html.
   description = "I am cool B)"
@@ -71,19 +71,10 @@ ignoreErrors = ["error-disable-taxonomy"]
 [outputs]
   home = ['html', 'rss']
   section = ['html', 'rss']
-  taxonomy = ['html']
   term = ['html']
 
 # To disable feed generation or sitemap for all page kinds:
 # disableKinds = ['rss', 'sitemap']
-
-# By default, the number of items in each feed is unlimited. Change this as needed in 
-# your site configuration:
-# [services]
-#   [services.rss]
-#     limit = 42 # Set limit to -1 to generate an unlimited number of items per feed.
-
-
 # =================================================================================
 [sitemap]
   # How frequently a page is likely to change. Valid values are always, hourly, daily, weekly, monthly, 

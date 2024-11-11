@@ -4,7 +4,7 @@ date = "2024-11-07"
 draft = false
 # Set menu to "main" to add this page to the main menu on top of the page
 # menu = "main"
-description = "To let me remember how to use shortcodes in my domain"
+description = "My golden fingers."
 tags = ["hugo","perosonalize"]
 # [sitemap]
 #   changefreq = 'weekly'

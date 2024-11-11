@@ -4,11 +4,6 @@
 # See https://ogp.me/ and https://gohugo.io/templates/internal#open-graph.
 title = "Hello :D"
 +++
-
-Hello and welcome to my brain dump. Quite messy here — incoherence, inconsistency, lots of edits, lazy grammar & punctuation and so on. Everything is a working draft.
-
-**Below is about me**
-
 Hello, this is *Li Xiang* aka *Shu*, friends also call me *juju*.
 {{< sidenote `
 <picture>
@@ -20,7 +15,7 @@ Gorgeous, delightful, fantastic, elegant, handsome, ~~cute~~ me.
 {{< /sidenote >}}  
 Pronouns: He/Him ~~(Attack Helicopter)~~.
 
-Special thanks to [(go)hugo](https://gohugo.io "The world's fastest framework for building websites") and [Jan Raasch](https://www.janraasch.com/)'s [bearblog](https://bearblog.dev/ "A privacy-first, no-nonsense, super-fast blogging platform"). Won't have this without all of you.
+Hello and welcome to my brain dump. Quite messy here — incoherence, inconsistency, lots of edits, lazy grammar & punctuation and so on. Everything is a working draft.
 
 First exposure to computers in my primary school, I developed a great interest in it, and I have started learning programming by myself since then. But for reasons I have now forgotten, I put it aside. To my shame, the true time I approached the gate was last year. I still remember when I made friends with Bowa in school, we played [Minecraft](https://www.minecraft.net "Sandbox Survival, Adventure
 Single-player + Multiplayer") together on a modded server, and he showed me how to code in Minecraft with [Lua](https://www.lua.org). It is amazing, how can you code in a game. And I suddenly remembered my dream when I was a child ~~(to be a hacker)~~, so I started
