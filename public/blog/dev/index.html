@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="http://localhost:1313/favicon.ico" />
+<title>Dev | Li Xiang&#39;s Brain Dump</title>
+<meta name="title" content="Dev" />
+<meta name="description" content="I am cool B)" />
+<meta name="keywords" content="dev,hugo,life,perosonalize,random," />
+
+
+<meta property="og:url" content="http://localhost:1313/blog/dev/">
+  <meta property="og:site_name" content="Li Xiang&#39;s Brain Dump">
+  <meta property="og:title" content="Dev">
+  <meta property="og:description" content="I am cool B)">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+    <meta property="og:image" content="http://localhost:1313/images/bird.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/images/bird.png">
+  <meta name="twitter:title" content="Dev">
+  <meta name="twitter:description" content="I am cool B)">
+
+
+
+
+  <meta itemprop="name" content="Dev">
+  <meta itemprop="description" content="I am cool B)">
+  <meta itemprop="datePublished" content="2024-11-11T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2024-11-11T00:00:00+00:00">
+  <meta itemprop="image" content="http://localhost:1313/images/bird.png">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  @import url(/css/sidenote.css);
+  @import url(https://fonts.googleapis.com/css?family=Neucha|Patrick+Hand+SC);
+  body {
+    background-image: url('/images/geometry_light.png');
+    font-family: Neucha, sans-serif;
+    font-size: 1.25rem;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #333;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  b {
+    font-family: "Patrick Hand SC", sans-serif;
+  }
+
+  th {
+    font-family: "Patrick Hand SC", sans-serif;
+    font-size: 1.5rem;
+    border: 1px solid #333;
+    padding: 2%;
+  }
+
+  td {
+    font-family: "Neucha", sans-serif;
+    font-size: 1.25rem;
+    border: 1px solid #333;
+    padding: 1%;
+  }
+
+  table {
+    border-collapse: collapse;
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow-x: auto;
+    width: 100%
+  }
+
+  h1 {
+    font-size: 3rem  
+  }
+  h2 {
+    font-size: 2rem  
+  }
+  h3 {
+    font-size: 1.75rem  
+  }
+  h4 {
+    font-size: 1.5rem  
+  }
+  h5 {
+    font-size: 1.25rem  
+  }
+  h6 {
+    font-size: .8rem  
+  }
+  
+  a {
+    color: #3273dc;
+     
+  }
+
+  .title {
+    color: #222;
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    font-family: "Neucha", sans-serif;
+    padding: 2px 5px;
+    background-color: #b5e4ff;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    font-size: 1.25rem;
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    margin-top: auto;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-image: url('/images/geometry_dark.png');
+      background-color: #333;
+      color: #ddd;
+    }
+
+    .title {
+      color: #ddd;
+      text-decoration: none;
+      border: 0;
+    }
+
+    th {
+      border: 1px solid #ddd;
+    }
+  
+    td {
+      border: 1px solid #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+    
+  }
+
+</style>
+
+
+
+</head>
+
+<body>
+  <header><h2>
+<a href="/" class="title">
+  Li Xiang&#39;s Brain Dump
+</a>
+</h2>
+
+<nav><a href="/">Home</a>
+
+<a href="/blog/">Blog</a>
+<a href="/index.xml">RSS</a>
+</nav>
+</header>
+  <main>
+<content>
+  
+  <h3 style="margin-bottom:0">Filtering for "Dev"</h3>
+  <small>
+    <a href="/blog">Remove filter</a>
+  </small>
+  
+  <ul class="blog-posts">
+    
+    <li>
+      <span>
+        <i>
+          <time datetime='2024-11-11' pubdate>
+            11 Nov, 2024
+          </time>
+        </i>
+      </span>
+      <a href="http://localhost:1313/11-11-11-11/">11 11 11 11</a>
+    </li>
+    
+    <li>
+      <span>
+        <i>
+          <time datetime='2024-11-02' pubdate>
+            02 Nov, 2024
+          </time>
+        </i>
+      </span>
+      <a href="http://localhost:1313/how-to-open-links-in-new-tab-in-your-hugo-site/">How to Open Links in New Tab in Your Hugo Site</a>
+    </li>
+    
+    <li>
+      <span>
+        <i>
+          <time datetime='2024-10-31' pubdate>
+            31 Oct, 2024
+          </time>
+        </i>
+      </span>
+      <a href="http://localhost:1313/how-to-add-a-scroll-button-to-your-hugo-site/">How to Add a Scroll Button to Your Hugo Site</a>
+    </li>
+    
+    <li>
+      <span>
+        <i>
+          <time datetime='2024-10-29' pubdate>
+            29 Oct, 2024
+          </time>
+        </i>
+      </span>
+      <a href="http://localhost:1313/how-to-integrate-comments-into-your-hugo-site/">How to Integrate Comments into Your Hugo Site</a>
+    </li>
+    
+  </ul>
+  
+  
+</content>
+
+  </main>
+    <footer><i>Dear wind, please take 
+<a href="mailto:shu@lixiang.dev" title="Wanna mail to cool me? ٩(^ᗜ^ )و">
+    me
+  </a> fly</i>  
+<br>
+Copyright &copy; 2024 Li Xiang 
+ · 
+Based on <a href="https://bearblog.dev/" target="_blank">Bear ʕ•ᴥ•ʔ Blog</a><script src="/js/vanilla-back-to-top.min.js"></script>
+<script>
+  addBackToTop({
+  backgroundColor: '#fff',
+  diameter: 45, 
+  innerHTML: '<svg viewBox="0 0 24 24"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg>',
+  scrollDuration: 777, 
+  textColor: '#011',
+  })
+</script>
+<script type="text/javascript" src="/js/lightbox.js"></script>
+<link rel="stylesheet" href="/css/lightbox.css">
+</body>
+</html></footer>
+</body>
+
+</html>
