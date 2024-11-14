@@ -13,6 +13,8 @@ enableEmoji = true
 # configuration:
 copyright = 'Copyright © 2024 Li Xiang.'
 
+assetDir = "static"
+
 # Generate a nice robots.txt for SEO
 enableRobotsTXT = true
 

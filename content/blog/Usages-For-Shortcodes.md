@@ -62,11 +62,11 @@ Since I added some functions here, I think I need to note how to use shortcodes 
 {{< blockquote author="Li Xiang" link="https://lixiang.dev/usages-for-shortcodes/#blockquote" title="Usages for Shortcodes" >}}
   This is a quote from Li Xiang and links to https://lixiang.dev/usages-for-shortcodes/#blockquote with title "Usages for Shortcodes".
 {{< /blockquote >}}
-# gallery
+# image gallery
 ```markdown
-{{</* gallery dir="/images/Usage For Shortcodes" */>}}
+{{</* image-gallery gallery_dir="/images/Usage For Shortcodes" */>}}
 ```
-{{< gallery dir="/images/Usage For Shortcodes" >}}
+{{< image-gallery gallery_dir="/images/Usage For Shortcodes" >}}
 # sidenote
 ```markdown
 {{</* sidenote `

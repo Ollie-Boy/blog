@@ -23,6 +23,7 @@ What I referred to are listed below:
     - https://github.com/vfeskov/vanilla-back-to-top/
 6. **Gallery:** 
     - https://github.com/thisdev/hugo-gallery-shortcode/tree/main/
+    - https://hugocodex.org/add-ons/image-gallery/
 7. **Blockquote:** 
     - https://atharvashah.netlify.app/posts/tech/hugo-shortcodes/
 8. **Emoji:** 
