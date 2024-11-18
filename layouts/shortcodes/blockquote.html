@@ -46,7 +46,7 @@
 
 <blockquote>
   <i>{{ .Inner | markdownify }}</i>
-  <div class=blockquote_footer style="text-align: right;">
+  <div class=blockquote_footer>
     {{ if .Get "author" }}
     <strong>-- {{ with $.Scratch.Get "bl_author" }}{{ . }}{{ end }}</strong>
     {{ else }}{{ end }}
