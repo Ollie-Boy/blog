@@ -14,12 +14,12 @@ What I referred to are listed below:
 3. **Shortcode:** 
     - https://gohugo.io/content-management/shortcodes/
 4. **Comment:** 
-    - **giscus:** 
+    - **Giscus:** 
         - https://cdwilson.dev/articles/using-giscus-for-comments-in-hugo/
-    - **disqus:** 
+    - **Disqus:** 
         - https://gohugo.io/content-management/comments/
         - https://portfolio.peter-baumgartner.net/2017/09/10/how-to-install-disqus-on-hugo/
-5. **Scroll Button:** 
+5. **Scroll button:** 
     - https://github.com/vfeskov/vanilla-back-to-top/
 6. **Gallery:** 
     - https://github.com/thisdev/hugo-gallery-shortcode/tree/main/
@@ -35,7 +35,9 @@ What I referred to are listed below:
 10. **Collapsible**:
     - https://github.com/zwbetz-gh/papercss-hugo-theme/
     - https://stackoverflow.com/questions/71691219/add-collapsible-section-in-hugo/
-11. **Others:**
+11. **Alert, background, badge, collapsible, color**:
+    - https://github.com/zwbetz-gh/papercss-hugo-theme/
+12. **Others:**
     - https://stackoverflow.com/
     - https://discourse.gohugo.io/
     - ...
