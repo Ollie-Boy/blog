@@ -1,5 +1,3 @@
-elevant part of my netlify.toml:
-
 [context.production.environment]
 	HUGO_VERSION = "0.136.0"
 	HUGO_ENV = "production"
