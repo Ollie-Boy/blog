@@ -1,5 +1,6 @@
 .idea
 .vscode
+.obsidian
 public/
 resources/
 .hugo_build.lock

@@ -41,4 +41,5 @@ What I referred to are listed below:
     - https://stackoverflow.com/
     - https://discourse.gohugo.io/
     - ...
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9021bbe9-f8af-48e4-afe2-1eb76ddf8a91/deploy-status)](https://app.netlify.com/sites/devlixiang/deploys)
