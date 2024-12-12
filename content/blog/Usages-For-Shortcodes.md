@@ -295,9 +295,9 @@ Muted
 ```
 {{< badge "secondary" >}}secondary{{< /badge >}}
 ```go
-{{</* badge "success" >}}suess{{< /badge */>}}
+{{</* badge "success" >}}success{{< /badge */>}}
 ```
-{{< badge "success" >}}suess{{< /badge >}}
+{{< badge "success" >}}success{{< /badge >}}
 ```go
 {{</* badge "warning" >}}warning{{< /badge */>}}
 ```

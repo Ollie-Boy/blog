@@ -1,9 +1,7 @@
 # If you read this then you are cool, but I am cooler, and the coolest of all. B)
-Sitemap: 
-{{ "sitemap.xml" | absURL }}
+Sitemap: {{ "sitemap.xml" | absURL }}
 
 User-Agent: *
 
 # Big bad bots.
-Disallow:  
-{{ partial "bad-robots.html" . }}
+Disallow: {{ partial "bad-robots.html" . }}

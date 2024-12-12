@@ -1,18 +1,42 @@
 .background-primary {
-    background-color: #f9a600
+    background-color: #f9a600;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 215px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 215px;
   }
 .background-secondary {
-    background-color: #0071de
+    background-color: #0071de;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 215px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 215px;
   }
 .background-success {
-    background-color: #86a361
+    background-color: #86a361;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 215px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 215px;
   }
 .background-warning {
-    background-color: #ddcd45
+    background-color: #ddcd45;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 215px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 215px;
   }
 .background-danger {
-    background-color: #a7342d
+    background-color: #a7342d;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 215px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 215px;
   }
 .background-muted {
-    background-color: #868e96
+    background-color: #868e96;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 215px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 215px;
   }

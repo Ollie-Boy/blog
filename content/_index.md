@@ -1,7 +1,4 @@
 +++
-# This title is used as the og:title on Hugo's internal
-# opengraph structured data template on the home page.
-# See https://ogp.me/ and https://gohugo.io/templates/internal#open-graph.
 title = "Hello :D"
 +++
 Hello, this is *Li Xiang* aka *Shu*, friends also call me *juju*.
@@ -30,7 +27,7 @@ and integrate systems more effectively."). I read some articles and [this](https
 
 4. Gotta say, there should be a fourth one and yes it is [Go](https://go.dev "Build simple, secure, scalable systems with Go"). I am planning to learn it because I wanna create my own hugo theme. There are lots of themes and every one of them is good, but barely one of them catches my eye. The papercss hugo theme I use now still lacks something that only exists in my brain, lol.
 
-Back to me, I am still a student, shy so prefer to typewrite. Minecraft ign is *MeWannaFly* ~~(yes, IWannaFly is occupied)~~. I also run another webpage: [WindTavern](https://windtavern.com "A Tavern But Only Offer Milk."), I use it to put stories and books, go and take a look if you want. :p
+Back to me, I am still a student, shy so prefer to typewrite. Minecraft ign is *MeWannaFly* ~~(Yes, IWannaFly is occupied)~~.
 
 {{< sidenote `
 <picture>
