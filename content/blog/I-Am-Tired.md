@@ -1,5 +1,5 @@
 +++
-title = "I am tired"
+title = "I Am Tired"
 date = "2024-12-12"
 description = "I need a vacation."
 tags = ["perosonalize"]

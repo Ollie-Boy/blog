@@ -35,7 +35,7 @@ What I referred to are listed below:
 10. **Collapsible**:
     - https://github.com/zwbetz-gh/papercss-hugo-theme/
     - https://stackoverflow.com/questions/71691219/add-collapsible-section-in-hugo/
-11. **Alert, background, badge, collapsible, color**:
+11. **Alert, Background, Badge, Collapsible, Color**:
     - https://github.com/zwbetz-gh/papercss-hugo-theme/
 12. **Others:**
     - https://stackoverflow.com/

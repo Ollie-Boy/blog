@@ -27,7 +27,7 @@ ignoreErrors = ["error-disable-taxonomy"]
 
 [params]
   # Sentence you wanna show in the footer, markdown supported.
-  footer = 'Dear wind, please take [me](mailto:shu@lixiang.dev "Wanna mail to cool me? ٩(^ᗜ^ )و") fly'
+  footer = '<i>Dear wind, please take [me](mailto:shu@lixiang.dev "Wanna mail to cool me? ٩(^ᗜ^ )و") fly</i>'
 
   # The "description" of your website. This is used in the meta data of your generated html.
   description = "I am cool B)"
@@ -36,8 +36,12 @@ ignoreErrors = ["error-disable-taxonomy"]
   # Hint: It's good practise to also put a "favicon.ico"-file into your "static/favicon"-folder.
   # Default is light.
   favicon = "/favicon/light/favicon.ico"
-  # Dark version of your "favicon".
   favicon_dark = "/favicon/dark/favicon.ico"
+
+  # Set the background image.
+  # Default is light.
+  background_image = "/images/geometry_light.png"
+  background_image_dark = "/images/geometry_dark.png"
 
   # These "images" are used for the structured data templates. This will show up, when
   # services like Twitter or Slack want to generate a preview of a link to your site.
