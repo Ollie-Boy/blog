@@ -18,7 +18,7 @@ What we need to do first is go to [vfeskov](https://github.com/vfeskov)'s [vanil
 ## Use the file provide on unpkg.com
 You can find [How to use](https://github.com/vfeskov/vanilla-back-to-top#how-to-use) if you read the README.
 
-Just add the below codes to your single page templates, for me, I put it in my footer partials `../layouts/partials/footer.html`.
+Just add the below codes to your footer template `../layouts/partials/footer.html`. You may notice the script is trying to append to a container that doesn't exist in your HTML when the script runs, but it truly works since the DOM is usually fully loaded by the time the script runs, which allows the script to be appended without needing to explicitly define a container.
 
 ```html
 <script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
@@ -30,11 +30,11 @@ Just add the below codes to your single page templates, for me, I put it in my f
 ```
 
 ## Use it locally
-You know, sometimes when network is not stable, your button may not show because it rely on remote, so I would recommend you to download it locally to keep your website render normally **(NOTE: Only if your website is not too big, or using cdn is a good way.)**
+Well, sometimes when network is not stable, your button may not show because it rely on remote, so I would recommend you to download it locally to keep your website render normally **(CDN is still a good way tho.)**
 
-So just go to the [page](https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js), copy the code, name it as `vanilla-back-to-top.min.js` and save it in your custom js folder, for example `../static/js/vanilla-back-to-top.min.js`.
+So just go to the [page](https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js), copy and paste the code as `vanilla-back-to-top.min.js` and put it in your custom js folder, for example `../static/js/vanilla-back-to-top.min.js`.
 
-Then like before, add the below codes in your single page templates.
+Then add the below codes in your footer template.
 
 ```html
 <script src="/js/vanilla-back-to-top.min.js"></script>
@@ -57,7 +57,6 @@ addBackToTop()
 ```
 
 ## Custom
-
 The default params are shown below, you can always custom it yourself.
 
 ```js
@@ -92,16 +91,19 @@ addBackToTop({
 |zIndex|	z-index of the button|
 |scrollContainer	|If only part of your website gets scrolled, e.g., when your sidebar never scrolls with content, put the scrolled DOM element here|
 
-And here is my config, you can see what it looks like at the right-down corner.
+And here is my config, you can see what it looks like at the right-down corner. If you wanna use mine, just copy and paste the codes to your header.html.
 
 ```html
 <script src="/js/vanilla-back-to-top.min.js"></script>
 <script>
-addBackToTop({
-  backgroundColor: '#fff',
-  diameter: 45,
-  innerHTML: '<svg viewBox="0 0 24 24"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg>',
-  scrollDuration: 777,
-  })
+  document.addEventListener('DOMContentLoaded', function() {
+    addBackToTop({
+      backgroundColor: '#fff',
+      diameter: 45, // px
+      innerHTML: '<svg viewBox="0 0 24 24"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg>',
+      scrollDuration: 777, // ms
+      textColor: '#011',
+    });
+  });
 </script>
 ```

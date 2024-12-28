@@ -1,19 +1,55 @@
 .image-gallery {
-    overflow: auto; margin-left: -6%!important;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    margin-left: -6%;
+    overflow: hidden;
 }
 
 .image-gallery li {
-    float: left; display: block; margin: 0 0 1% 1%; width: 19%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
 }
 
 .image-gallery li a {
-    text-align: center; text-decoration: none!important; color: #ddd;
+    display: block;
+    text-align: center;
+    text-decoration: none!important;
+    color: #ddd;
+    position: relative;
+    overflow: hidden;
 }
 
 .image-gallery li a span {
-    display: block; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; padding: 3px 0;
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 3px 0;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+    font-size: 14px;
+    width: calc(100% - 20px);
+    visibility: hidden;
+}
+
+.image-gallery li:hover a span {
+    visibility: visible;
 }
 
 .image-gallery li a img {
-    width: 100%; display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.image-gallery li a:hover img {
+    transform: scale(1.15);
 }

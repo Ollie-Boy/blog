@@ -2,14 +2,8 @@
 title = "Usages for Shortcodes"
 date = "2024-11-07"
 draft = false
-# Set menu to "main" to add this page to the main menu on top of the page
-# menu = "main"
 description = "My golden fingers."
 tags = ["hugo","perosonalize"]
-# [sitemap]
-#   changefreq = 'weekly'
-#   disable = false
-#   priority = 0.8
 +++
 Since I added some functions here, I think I need to note how to use shortcodes in case of I forget someday.
 # blockquote
@@ -94,9 +88,9 @@ And sidenote on the left side. :sunglasses:
 {{< /sidenote >}}
 # audio
 ```go
-{{</* audio mp3="/audio/Voicy_Happy Happy Happy.mp3" */>}}
+{{</* audio mp3="/audio/bird-sing.mp3" */>}}
 ```
-{{< audio mp3="/audio/Voicy_Happy Happy Happy.mp3">}}
+{{< audio mp3="/audio/bird-sing.mp3">}}
 {{< sidenote `
 # collapsible
 ` left >}}

@@ -5,23 +5,19 @@ baseURL = "https://lixiang.dev"
 # Basic metadata configuration for your blog.
 title = "GoBirdo"
 languageCode = "en-US"
+assetDir = "static"
+
+# Number of posts per page
+pagination.pagerSize = 12
 
 # Enable emoji
 enableEmoji = true
 
 # The built-in RSS template will render the following values, if present, from your site
-# configuration:
 copyright = 'Copyright © 2024 Li Xiang.'
-
-assetDir = "static"
 
 # Generate a nice robots.txt for SEO
 enableRobotsTXT = true
-
-# Generate "Bearblog"-like URLs !only!, see https://bearblog.dev/.
-disableKinds = ["taxonomy"]
-ignoreErrors = ["error-disable-taxonomy"]
-
 
 [markup]
   [markup.goldmark]
@@ -30,12 +26,6 @@ ignoreErrors = ["error-disable-taxonomy"]
   [markup.highlight]
     lineNos = false
     lineNumbersInTable = false
-
-[permalinks]
-  [permalinks.section]
-    blog = "/:slug/"
-  [permalinks.term]
-    tags = "/blog/:slug"
 
 [params]
   # What you wanna show in the footer, markdown supported.

@@ -1,7 +1,8 @@
 # Hello
 Howdy and welcome. :D
 
-Special thanks to [(go)hugo](https://gohugo.io) and [Jan Raasch](https://www.janraasch.com/)'s [bearblog](https://bearblog.dev/). Won't have this without all of you. :heart:
+Special thanks to [(go)hugo](https://gohugo.io) and [Jan Raasch](https://www.janraasch.com/)'s [bearblog](https://bearblog.dev/). 
+Also, thanks to all of you who are willing to share on the internet, will not have this without all of you. :heart:
 
 # Reference
 What I referred to are listed below: 
@@ -12,7 +13,7 @@ What I referred to are listed below:
 2. **Specify theme context for images in Markdown:** 
     - https://github.blog/changelog/2022-05-19-specify-theme-context-for-images-in-markdown-beta/#:~:text=You%20can%20now%20specify%20whether%20to%20display%20images,element%20in%20combination%20with%20the%20prefers-color-scheme%20media%20feature.
 3. **Shortcode:** 
-    - https://gohugo.io/content-management/shortcodes/
+    - https://gohugo.io/content-management/shortcodes/k
 4. **Comment:** 
     - **Giscus:** 
         - https://cdwilson.dev/articles/using-giscus-for-comments-in-hugo/
@@ -38,6 +39,7 @@ What I referred to are listed below:
 11. **Alert, Background, Badge, Collapsible, Color**:
     - https://github.com/zwbetz-gh/papercss-hugo-theme/
 12. **Others:**
+    - https://chatgpt.com/
     - https://stackoverflow.com/
     - https://discourse.gohugo.io/
     - ...
