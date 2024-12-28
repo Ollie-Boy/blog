@@ -1,18 +1,36 @@
 .text-primary {
+  margin-top: 20px;
+
+  margin-bottom: 20px;
     color: #f9a600
   }
 .text-secondary {
+  margin-top: 20px;
+
+  margin-bottom: 20px;
     color: #0071de
   }
 .text-success {
+  margin-top: 20px;
+
+  margin-bottom: 20px;
     color: #86a361
   }
 .text-warning {
+  margin-top: 20px;
+
+  margin-bottom: 20px;
     color: #ddcd45
   }
 .text-danger {
+  margin-top: 20px;
+
+  margin-bottom: 20px;
     color: #a7342d
   }
 .text-muted {
+  margin-top: 20px;
+
+  margin-bottom: 20px;
     color: #868e96
   }

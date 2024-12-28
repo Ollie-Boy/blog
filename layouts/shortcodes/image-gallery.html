@@ -1,11 +1,3 @@
-<style>
-    .image-gallery {overflow: auto; margin-left: -6%!important;}
-    .image-gallery li {float: left; display: block; margin: 0 0 1% 1%; width: 19%;}
-    .image-gallery li a {text-align: center; text-decoration: none!important; color: #ddd;}
-    .image-gallery li a span {display: block; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; padding: 3px 0;}
-    .image-gallery li a img {width: 100%; display: block;}
-</style>
-
 {{ $dir := string (.Get "gallery_dir") }}
 <ul class="image-gallery">
 {{ range (readDir (print "/static" $dir)) }}
@@ -18,6 +10,5 @@
         <span>{{ $imagetitle }}</span>
       </a>
     </li>
-  
 {{ end }}
 </ul>

@@ -3,7 +3,7 @@
 baseURL = "https://lixiang.dev"
 
 # Basic metadata configuration for your blog.
-title = "Li Xiang's Brain Dump"
+title = "GoBirdo"
 languageCode = "en-US"
 
 # Enable emoji
@@ -21,13 +21,25 @@ enableRobotsTXT = true
 # Generate "Bearblog"-like URLs !only!, see https://bearblog.dev/.
 disableKinds = ["taxonomy"]
 ignoreErrors = ["error-disable-taxonomy"]
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true # Allow html language in markdown files.
+  [markup.highlight]
+    lineNos = false
+    lineNumbersInTable = false
+
 [permalinks]
-  blog = "/:slug/"
-  tags = "/blog/:slug"
+  [permalinks.section]
+    blog = "/:slug/"
+  [permalinks.term]
+    tags = "/blog/:slug"
 
 [params]
-  # Sentence you wanna show in the footer, markdown supported.
-  footer = '<i>Dear wind, please take [me](mailto:shu@lixiang.dev "Wanna mail to cool me? ٩(^ᗜ^ )و") fly</i>'
+  # What you wanna show in the footer, markdown supported.
+  footer = '<i>Dear wind, please take me fly</i>'
 
   # The "description" of your website. This is used in the meta data of your generated html.
   description = "I am cool B)"
@@ -52,7 +64,7 @@ ignoreErrors = ["error-disable-taxonomy"]
   # Another "title" :-). This one is used as the site_name on the Hugo's internal
   # opengraph structured data template.
   # See https://ogp.me/ and https://gohugo.io/templates/internal#open-graph.
-  title = "Li Xiang's Brain Dump"
+  title = "GoBirdo"
 
   # This theme will, by default, inject a made-with-line at the bottom of the page.
   # You can turn it off, but we would really appreciate if you don’t :-).
@@ -69,7 +81,7 @@ ignoreErrors = ["error-disable-taxonomy"]
   # The built-in RSS template will render the following values, if present, from your site
   # configuration:
   [params.author]
-    email = 'shu@lixiang.dev'
+    email = 'shu@lixiang.dev' # This will be your contact email.
     name = 'Li Xiang' # This will show in the copyright.
 # =================================================================================
 # By default, when you build your site, Hugo generates RSS feeds for home, section,
@@ -81,7 +93,7 @@ ignoreErrors = ["error-disable-taxonomy"]
   section = ['html', 'rss']
   term = ['html']
 
-# To disable feed generation or sitemap for all page kinds:
+# To disable feed generation or sitemap for all page kinds, uncomment this:
 # disableKinds = ['rss', 'sitemap']
 # =================================================================================
 [sitemap]
@@ -95,11 +107,3 @@ ignoreErrors = ["error-disable-taxonomy"]
   # The priority of a page relative to any other page on the site. Valid values range from 0.0 to 1.0. With
   # the default value of -1 Hugo will omit this field from the sitemap.
   priority = -1
-
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
-  [markup.highlight]
-    lineNos = false
-    lineNumbersInTable = false

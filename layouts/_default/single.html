@@ -11,11 +11,13 @@
 {{ end }}{{ end }}
 <content>
   {{ .Content }}
+  <p>
+    <a href="{{ "/blog" | relURL }}" class="cta">Back to Lists</a>
+  </p>
 </content>
 <p>
   {{ range (.GetTerms "tags") }}
   <a href="{{ .Permalink }}">#{{ .LinkTitle }}</a>
   {{ end }}
 </p>
-
 {{ end }}

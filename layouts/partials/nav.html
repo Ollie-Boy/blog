@@ -1,5 +1,9 @@
-<a href="{{ "" | relURL }}">Home</a>
+<a href="{{ "/" | relURL }}">Home</a>
+
+{{ $authorEmail := .Site.Params.author.email }}
 {{ range .Site.Menus.main }}
-<a href="{{ .URL }}">{{ .Name }}</a>
-<a href="{{ "/index.xml" | relURL }}">RSS</a>
+  <a href="{{ .URL }}">{{ .Name }}</a>
 {{ end }}
+
+<a href="{{ "/index.xml" | relURL }}">RSS</a>
+<a href="mailto:{{ $authorEmail }}">Contact</a>

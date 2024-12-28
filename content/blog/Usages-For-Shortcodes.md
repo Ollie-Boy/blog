@@ -70,25 +70,25 @@ Since I added some functions here, I think I need to note how to use shortcodes 
 # sidenote
 ```go
 {{</* sidenote `
-Main content.
+Some content.
 ` >}}
 This is a sidenote. :smile:
 {{< /sidenote */>}}
 ```
 {{< sidenote `
-Main content.
+Some content.
 ` >}}
 This is a sidenote. :smile:
 {{< /sidenote >}}
 ```go
 {{</* sidenote `
-Another main content.
+Another content.
 ` left >}}
 And sidenote on the left side. :sunglasses:
 {{< /sidenote */>}}
 ```
 {{< sidenote `
-Another main content.
+Another content.
 ` left >}}
 And sidenote on the left side. :sunglasses:
 {{< /sidenote >}}
@@ -100,29 +100,29 @@ And sidenote on the left side. :sunglasses:
 {{< sidenote `
 # collapsible
 ` left >}}
-From collapsible to badge, all codes are from [zwbetz-gh](https://zwbetz.com/)'s [papercss-hugo-theme](https://github.com/zwbetz-gh/papercss-hugo-theme), I appreciate. :heart:
+From collapsible to badge, all codes are based on [zwbetz-gh](https://zwbetz.com/)'s [papercss-hugo-theme](https://github.com/zwbetz-gh/papercss-hugo-theme), I appreciate. :heart:
 {{< /sidenote >}}
 ```go
-{{</* collapsible "Lorem ipsum" */>}}
-Lorem ipsum _dolor sit amet_, consectetur [adipiscing elit](https://example.org/).
+{{</* collapsible "One Layer Collapsible" */>}}
+Content here.
 {{</* /collapsible */>}}
 ```
-{{< collapsible "Lorem ipsum" >}}
-Lorem ipsum _dolor sit amet_, consectetur [adipiscing elit](https://example.org/).
+{{< collapsible "One Layer Collapsible" >}}
+Content here.
 {{< /collapsible >}}
 ```go
-{{</* collapsible "Lorem ipsum" */>}}
-Lorem ipsum _dolor sit amet_, consectetur [adipiscing elit](https://example.org/).
+{{</* collapsible "1/2" */>}}
+Some content here.
 {{</* /collapsible */>}}
-{{</* collapsible "Lorem ipsum" */>}}
-Lorem ipsum _dolor sit amet_, consectetur [adipiscing elit](https://example.org/).
+{{</* collapsible "2/2" */>}}
+Another content here.
 {{</* /collapsible */>}}
 ```
-{{< collapsible "Lorem ipsum" >}}
-Lorem ipsum _dolor sit amet_, consectetur [adipiscing elit](https://example.org/).
+{{< collapsible "1/2" >}}
+Some content here.
 {{< /collapsible >}}
-{{< collapsible "Lorem ipsum" >}}
-Lorem ipsum _dolor sit amet_, consectetur [adipiscing elit](https://example.org/).
+{{< collapsible "2/2" >}}
+Another content here.
 {{< /collapsible >}}
 # color
 ```go
