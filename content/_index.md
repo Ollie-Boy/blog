@@ -25,9 +25,9 @@ and integrate systems more effectively."). I read some articles and [this](https
 
 3. So here is [Java](https://www.java.com) -- the third one. Java is used for creating mobile and web apps, enterprise software, Internet of Things (IoT) devices, gaming, big data, distributed, and cloud-based applications among other types. I also tried to build my own blog with the knowledge that I learned and I am still learning it now.
 
-4. Gotta say, there should be a fourth one and yes it is [Go](https://go.dev "Build simple, secure, scalable systems with Go"). I am planning to learn it because I wanna create my own hugo theme. There are lots of themes and every one of them is good, but barely one of them catches my eye. The papercss hugo theme I use now still lacks something that only exists in my brain, lol.
+4. Gotta say, there should be a fourth one and yes it is [Go](https://go.dev "Build simple, secure, scalable systems with Go"). Because I wanna create my own hugo theme. There are lots of themes and every one is good, but gotta say there's something that only exists in my brain, lol.
 
-Back to me, I am still a student, shy so prefer to typewrite. Minecraft ign is *MeWannaFly* ~~(Yes, IWannaFly is occupied)~~.
+Back to me, I am still a student, shy so prefer to typewrite. Minecraft ign is *MeWannaFly* ~~(Yes, IWannaFly is occupied)~~. My Discord is *shuzomatsutani*(Not checked often tho). You can also email me by clicking *Contact* at the far right of the top.
 
 {{< sidenote `
 <picture>

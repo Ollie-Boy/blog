@@ -1,0 +1,19 @@
+#backToTopButton {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    width: 45px !important;
+    height: 45px !important;
+    padding: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#backToTopButton svg {
+    width: 100% !important;
+    height: 100% !important;
+    fill: #011;
+}

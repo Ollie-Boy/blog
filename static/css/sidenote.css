@@ -50,7 +50,7 @@
         position: static;
         margin-top: 10px;
         margin-bottom: 10px;
-        width: 100%;
+        max-width: 100%;
         display: none;
       }
       .sidenote-checkbox:checked ~ .sidenote-content {

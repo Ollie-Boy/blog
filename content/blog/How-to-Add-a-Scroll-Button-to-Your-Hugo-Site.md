@@ -91,19 +91,53 @@ addBackToTop({
 |zIndex|	z-index of the button|
 |scrollContainer	|If only part of your website gets scrolled, e.g., when your sidebar never scrolls with content, put the scrolled DOM element here|
 
-And here is my config, you can see what it looks like at the right-down corner. If you wanna use mine, just copy and paste the codes to your header.html.
+And here is my config, you can see what it looks like at the right-down corner. If you wanna use mine, just copy and paste the codes to your head.html.
 
 ```html
+<!-- vanilla-back-to-top -->
 <script src="/js/vanilla-back-to-top.min.js"></script>
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener("DOMContentLoaded", function () {
     addBackToTop({
-      backgroundColor: '#fff',
-      diameter: 45, // px
-      innerHTML: '<svg viewBox="0 0 24 24"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg>',
-      scrollDuration: 777, // ms
-      textColor: '#011',
+      id: "backToTopButton",
+      backgroundColor: "transparent",
+      textColor: "transparent",
+      size: 45,
+      scrollDuration: 777,
+      innerElement:
+        '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 14l5-5 5 5H7z" fill="#011"/></svg>',
+      cornerOffset: 15,
     });
+
+    const backToTopButton = document.getElementById("backToTopButton");
+    if (backToTopButton) {
+      backToTopButton.style.backgroundColor = "transparent";
+      backToTopButton.style.border = "none";
+      backToTopButton.style.boxShadow = "none";
+      backToTopButton.style.outline = "none";
+    }
   });
 </script>
+
+<style>
+  #backToTopButton {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    width: 45px !important;
+    height: 45px !important;
+    padding: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  #backToTopButton svg {
+    width: 100% !important;
+    height: 100% !important;
+    fill: #011;
+  }
+</style>
 ```
