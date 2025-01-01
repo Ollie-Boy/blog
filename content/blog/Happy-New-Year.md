@@ -65,7 +65,6 @@ tags = ["Holiday", "New Year", "Life"]
     footer {
     position: relative;
     z-index: 1;
-    background-color: #fff;
     text-align: center;
     padding: 10px;
     margin-top: 100px;
