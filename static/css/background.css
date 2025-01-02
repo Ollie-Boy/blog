@@ -1,42 +1,39 @@
+.background {
+  width: fit-content;
+}
 .background-primary {
   background-color: #f9a600;
-
   margin-top: 20px;
-  padding: 15px;
+  padding: 10px;
   margin-bottom: 20px;
 }
 .background-secondary {
   background-color: #0071de;
-
   margin-top: 20px;
-  padding: 15px;
+  padding: 10px;
   margin-bottom: 20px;
 }
 .background-success {
   background-color: #86a361;
-
   margin-top: 20px;
-  padding: 15px;
+  padding: 10px;
   margin-bottom: 20px;
 }
 .background-warning {
   background-color: #ddcd45;
-
   margin-top: 20px;
-  padding: 15px;
+  padding: 10px;
   margin-bottom: 20px;
 }
 .background-danger {
   background-color: #a7342d;
-
   margin-top: 20px;
-  padding: 15px;
+  padding: 10px;
   margin-bottom: 20px;
 }
 .background-muted {
   background-color: #868e96;
-
   margin-top: 20px;
   margin-bottom: 20px;
-  padding: 15px;
+  padding: 10px;
 }

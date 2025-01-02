@@ -91,10 +91,11 @@ And sidenote on the left side. :sunglasses:
 {{</* audio mp3="/audio/bird-sing.mp3" */>}}
 ```
 {{< audio mp3="/audio/bird-sing.mp3">}}
+
 {{< sidenote `
 # collapsible
 ` left >}}
-From collapsible to badge, all codes are based on [zwbetz-gh](https://zwbetz.com/)'s [papercss-hugo-theme](https://github.com/zwbetz-gh/papercss-hugo-theme), I appreciate. :heart:
+From collapsible to badge, all codes are based on [zwbetz-gh](https://zwbetz.com/)'s [papercss-hugo-theme](https://github.com/zwbetz-gh/papercss-hugo-theme), I appreciate. ❤️
 {{< /sidenote >}}
 ```go
 {{</* collapsible "One Layer Collapsible" */>}}
@@ -105,17 +106,17 @@ Content here.
 Content here.
 {{< /collapsible >}}
 ```go
-{{</* collapsible "1/2" */>}}
+{{</* collapsible "A" */>}}
 Some content here.
 {{</* /collapsible */>}}
-{{</* collapsible "2/2" */>}}
+{{</* collapsible "B" */>}}
 Another content here.
 {{</* /collapsible */>}}
 ```
-{{< collapsible "1/2" >}}
+{{< collapsible "A" >}}
 Some content here.
 {{< /collapsible >}}
-{{< collapsible "2/2" >}}
+{{< collapsible "B" >}}
 Another content here.
 {{< /collapsible >}}
 # color

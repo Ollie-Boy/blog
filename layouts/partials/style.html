@@ -9,6 +9,7 @@
   @import url(/css/lightbox.css);
   @import url(/css/sidenote.css);
   @import url(https://fonts.googleapis.com/css?family=Neucha|Patrick+Hand+SC);
+  @import url(https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap);
 
   body {
     overflow-x: hidden;
@@ -212,6 +213,21 @@
     font-size: 1.2rem;
     text-decoration: none;
     transition: 0.3s ease, transform 0.3s ease;
+  }
+
+
+  /* Apply the handwriting font to all KaTeX elements */
+  .katex,
+  .katex-html,
+  .katex-mathml,
+  .katex-display,
+  .katex span {
+    font-family: "Patrick Hand", sans-serif !important;
+  }
+
+  /* Ensure the numbers and letters in math are also affected */
+  .katex .mord {
+    font-family: "Patrick Hand", sans-serif !important;
   }
 
   @media (prefers-color-scheme: dark) {
