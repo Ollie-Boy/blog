@@ -1,11 +1,8 @@
 +++
 title = "Hello :D"
 +++
-<<<<<<< HEAD
-Hello, this is *Li Xiang* aka *Izzy*, friends also call me *Malt*.
 =======
-Hello, this is *Li Xiang* aka *Shu*, friends also call me *juju*.
->>>>>>> 48fd3f62e8d4112e86cc5403903e5d6cf049f1a9
+Hello, this is *Li Xiang* aka *Izzy*, friends also call me *Malt*.
 {{< sidenote `
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="/images/bird_dark.png" width="80" height="80" align="left">
