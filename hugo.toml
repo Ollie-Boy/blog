@@ -72,7 +72,7 @@ enableRobotsTXT = true
   # The built-in RSS template will render the following values, if present, from your site
   # configuration:
   [params.author]
-    email = 'shu@lixiang.dev' # This will be your contact email.
+    email = 'bird@lixiang.dev' # This will be your contact email.
     name = 'Li Xiang' # This will show in the copyright.
 # =================================================================================
 # By default, when you build your site, Hugo generates RSS feeds for home, section,

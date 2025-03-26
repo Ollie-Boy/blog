@@ -28,7 +28,7 @@ and integrate systems more effectively."). I read some articles and [this](https
 
 4. Gotta say, there should be a fourth one and yes it is [Go](https://go.dev "Build simple, secure, scalable systems with Go"). Because I wanna create my own hugo theme. There are lots of themes and every one is good, but gotta say there's something that only exists in my brain, lol.
 
-Back to me, I am still a student, shy so prefer to type. Minecraft ign is *IzzyIzumi* and xbox is IzzyIzumi#8156. My Discord is [izumikoushiro](https://discord.com/users/1013646322915627018)(Not checked often tho). You can also email me by clicking *Contact* at the far right of the top.
+Back to me, I am still a student, shy so prefer to type. Minecraft ign is *IzzyIzumi* and xbox is IzzyIzumi#8156. My Discord is [izumikoushiro](https://discord.com/users/1013646322915627018)(Not checked often tho). You can also email me by clicking **Contact** at the far right of the top.
 
 {{< sidenote `
 <picture>
