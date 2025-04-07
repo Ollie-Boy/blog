@@ -2,6 +2,14 @@
 Sitemap: {{ "sitemap.xml" | absURL }}
 
 User-Agent: *
+Disallow: /
 
 # Big bad bots.
-Disallow: {{ partial "bad-robots.html" . }}
+{{- $url := "https://raw.githubusercontent.com/ai-robots-txt/ai.robots.txt/main/robots.json" -}}
+{{- $remote := resources.GetRemote $url -}}
+{{- if not $remote -}}
+  {{- errorf "Failed to fetch remote resource from %s" $url -}}
+{{- else -}}
+  {{- $robots := unmarshal $remote.Content -}}
+  {{ partial "bad-robots.html" (dict "robots" $robots) }}
+{{- end -}}
