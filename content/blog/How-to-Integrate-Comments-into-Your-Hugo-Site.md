@@ -6,7 +6,6 @@ tags = [
     "dev"
 ]
 date = "2024-10-29"
-author = "Li Xiang"
 +++
 
 Someday you suddenly think it is so alone in your webpage and you want others can leave their comment here, so you opened 

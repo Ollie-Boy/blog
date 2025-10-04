@@ -2,7 +2,7 @@
 title = "Hello :D"
 +++
 
-Hi, I'm **Li Xiang**, but my friends call me **Malt**.  
+Hi, I'm **Li Xiang**, my friends also call me **Ollie**.  
 {{< sidenote `
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="/images/bird_dark.png" width="80" height="80" align="right">
@@ -22,7 +22,7 @@ My journey with computers started back in primary school. I was instantly hooked
 
 ## The Coding Rollercoaster
 
-Let’s take a ride through my learning experience, shall we?
+Let’s take a ride through my learning experience.
 
 1. **Python** — Ah, the good old beginner’s choice. I did also read some articles. But, well... I quickly abandoned it. #SorryPython
 
@@ -36,7 +36,7 @@ Let’s take a ride through my learning experience, shall we?
 
 - I'm still a student.  
 - I’m a bit shy, so I prefer typing over talking.  
-- My **Minecraft IGN** is *IzzyIzumi*.  
+- My **Minecraft IGN** is *0llie_Boy*.  
 - **Xbox**: *IzzyIzumi#8156*  
 - **Discord**: [izumikoushiro](https://discord.com/users/1013646322915627018) *(Not checked often, though — don’t expect me to reply in a flash)*  
 - You can also email me by clicking **Contact** at the far right of the top (look for that magical button!).

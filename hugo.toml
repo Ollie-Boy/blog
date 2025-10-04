@@ -3,7 +3,7 @@
 baseURL = "https://lixiang.dev"
 
 # Basic metadata configuration for your site
-title = "Digital World"  # Title of your site
+title = "Breezeden"  # Title of your site
 languageCode = "en-US"  # Language code for your site
 assetDir = "static"  # Directory for assets like images, stylesheets, etc.
 
