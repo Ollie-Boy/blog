@@ -410,9 +410,8 @@
     animation: landingBreeze 4s ease-in-out infinite;
   }
 
-  /* Simple, foolish, funny Enter button */
   #enter-btn {
-    font-family: "Comic Neue", "Comic Sans MS", cursive, sans-serif; /* goofy font */
+    font-family: inherit;
     font-size: 1.3rem;
     letter-spacing: 0.1em;
     border: 2px solid currentColor;
@@ -426,7 +425,7 @@
     animation: buttonWobble 2s ease-in-out infinite alternate;
   }
 
-  /* Hover effect: silly wobble and bounce */
+  /* Hover effect */
   #enter-btn:hover {
     transform: translateY(-4px) rotate(3deg) scale(1.05);
   }
@@ -444,7 +443,6 @@
     75%  { transform: rotate(1deg) translateY(-2px); }
     100% { transform: rotate(-2deg) translateY(0); }
   }
-
 
   /* Animations */
   @keyframes floatUp {
