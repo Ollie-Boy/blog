@@ -1,6 +1,6 @@
 # Base URL for generating links on your site
 # Set this to the URL of your site
-baseURL = "https://lixiang.dev"
+baseURL = "https://lixiang.dev/"
 
 # Basic metadata configuration for your site
 title = "Breezeden"  # Title of your site
