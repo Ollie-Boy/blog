@@ -9,64 +9,70 @@ tags = ["Holiday", "New Year", "Life"]
 
 # Happy New Year!!!
 
-:fireworks:Enjoy the fireworks display! :fireworks:
+:fireworks: Enjoy the fireworks display! :fireworks:
 
-<div class="fireworks"></div>
+<div class="fireworks-wrapper">
+  <div class="fireworks"></div>
+</div>
 
+<!-- Fireworks.js -->
 <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.x/dist/index.umd.js"></script>
-
 <script>
-  // Select the container element where fireworks will be displayed
   const container = document.querySelector('.fireworks');
-  
-  // Initialize Fireworks.js with options to limit the scroll
+
   const fireworks = new Fireworks.default(container, {
-    // Set the size and position of the fireworks container
     width: window.innerWidth,
     height: window.innerHeight,
-    // Optionally disable scrolling effects if they are causing issues
     resize: true,
-    // Start fireworks at a more controlled rate
     autoStart: true,
-    // Change the behavior of the fireworks
+    mouse: { click: false, move: false },
     sound: {
-      enabled: true, // Enable sound if needed
+      enabled: true,
       files: [
         'https://fireworks.js.org/sounds/explosion0.mp3',
         'https://fireworks.js.org/sounds/explosion1.mp3',
         'https://fireworks.js.org/sounds/explosion2.mp3'
       ],
-      volume: { min: 1, max: 2 }, // Randomize sound volume
+      volume: { min: 1, max: 2 },
     },
-    // Configure other settings to stop them after a certain amount of time or limit movement
-    particles: 100, // Control the number of particles
-    gravity: 0, // Reduce gravity to stop vertical movement
-    explosion: 5, // Set the explosion size
-    brightness: { min: 50, max: 80 }, // Set brightness range
-    boundaries: { visible: false }, // Hide boundaries for a seamless effect
+    particles: 100,
+    gravity: 0,
+    explosion: 5,
+    brightness: { min: 50, max: 80 },
+    boundaries: { visible: false }
   });
 
-  fireworks.start(); // Start the fireworks display
+  fireworks.start();
+
+  // Prevent accidental navigation on clicks
+  document.body.addEventListener('click', function (e) {
+    e.stopPropagation();
+  });
 </script>
 
 <style>
-  body {
-    overflow: hidden;
-    height: 100vh;
-  }
-  .fireworks {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-  }
-    footer {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    padding: 10px;
-    margin-top: 100px;
-  }
+/* Fireworks wrapper stays on top without breaking page layout */
+.fireworks-wrapper {
+  position: fixed; /* stay on screen */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* clicks pass through */
+  z-index: 9999; /* above everything else */
+}
+
+.fireworks {
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  position: relative;
+  z-index: 1; /* below fireworks overlay */
+  text-align: center;
+  padding: 10px;
+  margin-top: 100px;
+  color: inherit; /* use page color */
+}
 </style>
