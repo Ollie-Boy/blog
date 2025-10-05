@@ -27,7 +27,7 @@ jobs:
           uses: peaceiris/actions-gh-pages@v4
           with:
               PERSONAL_TOKEN: ${{ secrets.My_Github_Token }}
-              EXTERNAL_REPOSITORY: ollie-boyd/blog
+              EXTERNAL_REPOSITORY: ollie-boy/blog
               PUBLISH_BRANCH: main
               PUBLISH_DIR: ./public
               commit_message: Deploy with GitHub Actions
