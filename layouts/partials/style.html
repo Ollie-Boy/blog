@@ -216,7 +216,7 @@
   }
 
   .back-to-lists {
-    display: inline-block; /* needed for transform to work */
+    display: inline-block;
     text-decoration: none;
     transition: 0.3s ease, transform 0.3s ease;
   }
@@ -226,16 +226,14 @@
     cursor: pointer;
   }
 
-  /* Make sure transform can work */
   .menu-link,
   .rss-link,
   .contact-link {
-    display: inline-block; /* needed for transform */
+    display: inline-block;
     text-decoration: none;
     transition: 0.3s ease, transform 0.3s ease;
   }
 
-  /* Hover effect: simple pop/scale */
   .menu-link:hover,
   .rss-link:hover,
   .contact-link:hover {
@@ -243,15 +241,12 @@
     cursor: pointer;
   }
 
-  /* Optional: active click effect */
   .menu-link:active,
   .rss-link:active,
   .contact-link:active {
     transform: scale(0.98);
   }
 
-
-  /* Apply the handwriting font to all KaTeX elements */
   .katex,
   .katex-html,
   .katex-mathml,
@@ -260,7 +255,6 @@
     font-family: "Patrick Hand", sans-serif !important;
   }
 
-  /* Ensure the numbers and letters in math are also affected */
   .katex .mord {
     font-family: "Patrick Hand", sans-serif !important;
   }
@@ -411,18 +405,23 @@
   }
 
   #enter-btn {
-    font-family: inherit;
-    font-size: 1.3rem;
+    font-family: "Comic Neue", "Comic Sans MS", cursive, sans-serif;
+    font-size: clamp(1rem, 4vw, 1.3rem); /* auto scales between mobile and desktop */
     letter-spacing: 0.1em;
     border: 2px solid currentColor;
     border-radius: 24px;
-    background: transparent; /* simple */
-    color: inherit; /* matches text color */
+    background: transparent;
+    color: inherit;
     cursor: pointer;
     font-weight: bold;
-    padding: 0.8em 2em;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 0.6em 2em; /* enough padding to make it visually balanced */
+    transition: transform 0.3s ease;
     animation: buttonWobble 2s ease-in-out infinite alternate;
+    width: auto;
+    max-width: 90%;
+    display: inline-block; /* fixes transform scaling issues */
+    text-align: center;
+    box-sizing: border-box;
   }
 
   /* Hover effect */
@@ -496,6 +495,60 @@
       background: transparent;
     }
     #enter-btn:hover { box-shadow: 0 6px 12px rgba(255,255,255,0.08); }
+  }
+
+  .airplane-container {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  .airplane {
+    position: absolute;
+    left: -10%;
+    width: 80px;
+    height: 80px;
+    opacity: 0.9;
+    transform-origin: center;
+    animation: airplaneFly 12s linear infinite;
+  }
+
+  @keyframes airplaneFly {
+    0% {
+      transform: translateX(-10%) translateY(-100px) rotate(45deg);
+    }
+
+    25% {
+      transform: translateX(25vw) translateY(-230px) rotate(30deg);
+    }
+    50% {
+      transform: translateX(50vw) translateY(-160px) rotate(50deg);
+    }
+    75% {
+      transform: translateX(75vw) translateY(-80px) rotate(65deg);
+    }
+    100% {
+      transform: translateX(110vw) translateY(60px) rotate(75deg);
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .airplane path {
+      fill: #fff;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .airplane {
+      width: 50px;
+      height: 50px;
+      animation-duration: 6s;
+    }
   }
 
 </style>
