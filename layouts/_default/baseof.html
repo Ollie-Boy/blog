@@ -1,48 +1,46 @@
 <!DOCTYPE html>
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+  <head>
+    <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {{- partial "favicon.html" . -}}
+    <title>{{- block "title" . }}{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{- end }}</title>
 
-<head>
-  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  {{- partial "favicon.html" . -}}
-  <title>{{- block "title" . }}{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{- end }}</title>
+    {{- partial "seo_tags.html" . -}}
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    {{ with .OutputFormats.Get "rss" -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
+    {{- partial "style.html" . -}}
+    {{- partial "custom_head.html" . -}}
+  </head>
 
-  {{- partial "seo_tags.html" . -}}
-  <meta name="referrer" content="no-referrer-when-downgrade" />
-  {{ with .OutputFormats.Get "rss" -}}
-  {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
-  {{ end -}}
-  {{- partial "style.html" . -}}
-  {{- partial "custom_head.html" . -}}
-</head>
-
-<body>
-  <!-- Landing overlay -->
-  <div id="landing">
-    <div class="landing-content">
-      <h1>Welcome to Breezeden</h1>
-      <button id="enter-btn">Enter</button>
+  <body>
+    <!-- Landing overlay -->
+    <div id="landing">
+      <div class="landing-content">
+        <h1>Welcome to Breezeden</h1>
+        <button id="enter-btn">Enter</button>
+      </div>
     </div>
-  </div>
 
-  <!-- Homepage content -->
-  <div id="homepage-wrapper" class="hidden">
-    <header>
-      {{- partial "header.html" . -}}
-    </header>
+    <!-- Homepage content -->
+    <script src="{{ "js/landing.js" | relURL }}"></script>
+    <div id="homepage-wrapper" class="hidden">
+      <header>
+        {{- partial "header.html" . -}}
+      </header>
 
-    <main>
-      {{- block "main" . }}{{- end }}
-    </main>
+      <main>
+        {{- block "main" . }}{{- end }}
+      </main>
 
-    {{- partial "custom_body.html" . -}}
+      {{- partial "custom_body.html" . -}}
+    </div>
+  </body>
 
-    <footer>
-      {{- partial "footer.html" . -}}
-    </footer>
-  </div>
-
-  <script src="{{ "js/landing.js" | relURL }}"></script>
-</body>
+  <footer>
+    {{- partial "footer.html" . -}}
+  </footer>
 </html>

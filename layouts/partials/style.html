@@ -215,6 +215,41 @@
     transition: 0.3s ease, transform 0.3s ease;
   }
 
+  .back-to-lists {
+    display: inline-block; /* needed for transform to work */
+    text-decoration: none;
+    transition: 0.3s ease, transform 0.3s ease;
+  }
+
+  .back-to-lists:hover {
+    transform: scale(1.15);
+    cursor: pointer;
+  }
+
+  /* Make sure transform can work */
+  .menu-link,
+  .rss-link,
+  .contact-link {
+    display: inline-block; /* needed for transform */
+    text-decoration: none;
+    transition: 0.3s ease, transform 0.3s ease;
+  }
+
+  /* Hover effect: simple pop/scale */
+  .menu-link:hover,
+  .rss-link:hover,
+  .contact-link:hover {
+    transform: scale(1.15); 
+    cursor: pointer;
+  }
+
+  /* Optional: active click effect */
+  .menu-link:active,
+  .rss-link:active,
+  .contact-link:active {
+    transform: scale(0.98);
+  }
+
 
   /* Apply the handwriting font to all KaTeX elements */
   .katex,
@@ -375,31 +410,41 @@
     animation: landingBreeze 4s ease-in-out infinite;
   }
 
+  /* Simple, foolish, funny Enter button */
   #enter-btn {
-    padding: 0.8em 2em;
-    font-size: 1.1rem;
-    border: 2px dashed currentColor;
-    border-radius: 16px;
-    background: transparent;
-    color: inherit;
-    font-weight: 500;
+    font-family: "Comic Neue", "Comic Sans MS", cursive, sans-serif; /* goofy font */
+    font-size: 1.3rem;
+    letter-spacing: 0.1em;
+    border: 2px solid currentColor;
+    border-radius: 24px;
+    background: transparent; /* simple */
+    color: inherit; /* matches text color */
     cursor: pointer;
-    letter-spacing: 0.05em;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    animation: buttonBreeze 3.5s ease-in-out infinite alternate;
+    font-weight: bold;
+    padding: 0.8em 2em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: buttonWobble 2s ease-in-out infinite alternate;
   }
 
+  /* Hover effect: silly wobble and bounce */
   #enter-btn:hover {
-    transform: translateY(-5px) scale(1.05);
-    border-color: currentColor;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+    transform: translateY(-4px) rotate(3deg) scale(1.05);
   }
 
+  /* Pressed effect */
   #enter-btn:active {
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transform: translateY(-2px) rotate(-1deg) scale(1.02);
   }
+
+  /* Wobble animation */
+  @keyframes buttonWobble {
+    0%   { transform: rotate(-2deg) translateY(0); }
+    25%  { transform: rotate(2deg) translateY(-3px); }
+    50%  { transform: rotate(-3deg) translateY(2px); }
+    75%  { transform: rotate(1deg) translateY(-2px); }
+    100% { transform: rotate(-2deg) translateY(0); }
+  }
+
 
   /* Animations */
   @keyframes floatUp {
@@ -455,9 +500,4 @@
     #enter-btn:hover { box-shadow: 0 6px 12px rgba(255,255,255,0.08); }
   }
 
-
-
-
-
-  
 </style>
