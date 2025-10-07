@@ -1,45 +1,31 @@
+/* ===== Image Gallery ===== */
 .image-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 16px;
-    margin-left: -6%;
-    overflow: hidden;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
 }
 
 .image-gallery li {
     position: relative;
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-gallery li:hover {
+    transform: scale(1.05) rotate(-1deg);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
 .image-gallery li a {
     display: block;
-    text-align: center;
     text-decoration: none!important;
-    color: #ddd;
+    color: #fff;
     position: relative;
-    overflow: hidden;
-}
-
-.image-gallery li a span {
-    display: block;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    padding: 3px 0;
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    color: white;
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 4px;
-    font-size: 14px;
-    width: calc(100% - 20px);
-    visibility: hidden;
-}
-
-.image-gallery li:hover a span {
-    visibility: visible;
 }
 
 .image-gallery li a img {
@@ -47,9 +33,38 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
+    border-radius: 12px;
 }
 
 .image-gallery li a:hover img {
-    transform: scale(1.15);
+    transform: scale(1.15) rotate(-2deg);
+}
+
+.image-gallery li a span {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    padding: 4px 6px;
+    background: rgba(0,0,0,0.6);
+    border-radius: 6px;
+    font-size: 14px;
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+}
+
+.image-gallery li:hover a span {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .image-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 10px;
+    }
 }

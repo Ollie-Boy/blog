@@ -7,22 +7,77 @@
 document.addEventListener('DOMContentLoaded', function () {
     addBackToTop({
         id: 'backToTopButton',
-        backgroundColor: 'transparent',
-        textColor: 'transparent',
-        size: 45,
+        backgroundColor: '#f8f8f8',
+        textColor: '#333',
+        size: 100,
         scrollDuration: 777,
-        innerElement: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 14l5-5 5 5H7z" fill="#011"/></svg>',
-        cornerOffset: 15
+        innerElement: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 14l5-5 5 5H7z" fill="currentColor"/></svg>',
+        cornerOffset: 50 // initial distance from bottom & right
     });
 
-    const backToTopButton = document.getElementById('backToTopButton');
-    if (backToTopButton) {
-        backToTopButton.style.backgroundColor = 'transparent';
-        backToTopButton.style.border = 'none';
-        backToTopButton.style.boxShadow = 'none';
-        backToTopButton.style.outline = 'none';
+    const btn = document.getElementById('backToTopButton');
+    if (!btn) return;
+
+    // Move button more to the left
+    btn.style.right = '150px'; // increase distance from the right
+
+    // Style for cute, silly effect
+    btn.style.borderRadius = '50%';
+    btn.style.boxShadow = '0 8px 20px rgba(0,0,0,0.25)';
+    btn.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+    btn.style.fontFamily = '"Patrick Hand SC", sans-serif';
+
+    // Floating animation
+    btn.animate(
+        [
+            { transform: 'translateY(0)' },
+            { transform: 'translateY(-12px)' },
+            { transform: 'translateY(0)' }
+        ],
+        {
+            duration: 3000,
+            iterations: Infinity,
+            easing: 'ease-in-out'
+        }
+    );
+
+    // Arrow wiggle
+    const svg = btn.querySelector('svg');
+    if (svg) {
+        svg.animate(
+            [
+                { transform: 'rotate(0deg)' },
+                { transform: 'rotate(15deg)' },
+                { transform: 'rotate(-12deg)' },
+                { transform: 'rotate(10deg)' },
+                { transform: 'rotate(-8deg)' },
+                { transform: 'rotate(5deg)' },
+                { transform: 'rotate(0deg)' }
+            ],
+            {
+                duration: 1500,
+                iterations: Infinity,
+                easing: 'ease-in-out'
+            }
+        );
     }
+
+    // Optional: responsive adjustment
+    function resizeButton() {
+        if (window.innerWidth <= 768) {
+            btn.style.width = '60px';
+            btn.style.height = '60px';
+            btn.style.right = '20px'; // move closer on mobile
+        } else {
+            btn.style.width = '100px';
+            btn.style.height = '100px';
+            btn.style.right = '150px'; // desktop left position
+        }
+    }
+    window.addEventListener('resize', resizeButton);
+    resizeButton(); // initial call
 });
+
 </script>
 
 <!-- KaTeX -->
@@ -41,3 +96,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 </script>
+
+
+
+<!-- Clock scripts and styles -->
+<link rel="stylesheet" href="{{ "css/clock.css" | relURL }}">
+<script src="{{ "js/clock.js" | relURL }}"></script>

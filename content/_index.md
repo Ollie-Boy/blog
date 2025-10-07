@@ -36,7 +36,8 @@ Let’s take a ride through my learning experience.
 
 - I'm still a student.  
 - I’m a bit shy, so I prefer typing over talking.  
-- My **Minecraft IGN** is *0llie_Boy*.  
+- **Minecraft IGN**: *0llie_Boy*
+- **Steam**: [Ollie-Boy](steamcommunity.com/id/ollie-boy)
 - **Xbox**: *IzzyIzumi#8156*  
 - **Discord**: [izumikoushiro](https://discord.com/users/1013646322915627018) *(Not checked often, though — don’t expect me to reply in a flash)*  
 - You can also email me by clicking **Contact** at the far right of the top (look for that magical button!).

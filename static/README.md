@@ -1,4 +1,4 @@
-# 🍃 Breezeden 🌸
+# 🍃 Breezeden
 
 > *A quiet place where where ideas float like clouds, 
 code grows like grass, and occasionally.*

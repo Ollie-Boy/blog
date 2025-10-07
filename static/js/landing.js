@@ -6,32 +6,35 @@ document.addEventListener("DOMContentLoaded", function () {
   const landingShown = sessionStorage.getItem('landingShown');
 
   if (landingShown) {
-    // If landing has already been shown, skip it entirely
-    if (landing) landing.remove(); // remove to avoid layout flash
+    // Skip landing on subsequent visits
+    if (landing) landing.remove();
     homepage.classList.remove('hidden');
     document.body.style.overflow = '';
     return;
   }
 
-  // Show landing only on first visit
+  // Show landing first time
   landing.classList.add('visible');
   homepage.classList.add('hidden');
   document.body.style.overflow = 'hidden';
 
-  // Handle Enter button click
   enterBtn.addEventListener('click', () => {
-    landing.classList.remove('visible');
+    // Fade out landing
     landing.classList.add('hidden');
+    landing.classList.remove('visible');
 
+    // Fade in homepage
     homepage.classList.remove('hidden');
-    document.body.style.overflow = '';
+    homepage.classList.add('breeze-in');
+
+    document.body.style.overflow = ''; // restore scroll
+
     sessionStorage.setItem('landingShown', 'true');
 
-    // Gentle fade-in animation
-    homepage.classList.add('breeze-in');
-    setTimeout(() => homepage.classList.remove('breeze-in'), 1500);
-
-    // Clean up DOM after fade
-    setTimeout(() => landing.remove(), 700);
+    // Clean up landing after fade-out
+    setTimeout(() => {
+      landing.remove();
+      homepage.classList.remove('breeze-in');
+    }, 500); // match CSS transition duration
   });
 });
