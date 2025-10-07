@@ -3,33 +3,35 @@ document.addEventListener("DOMContentLoaded", function () {
   const homepage = document.getElementById('homepage-wrapper');
   const enterBtn = document.getElementById('enter-btn');
 
-  // Hide homepage initially
-  homepage.classList.add('hidden');
+  const landingShown = sessionStorage.getItem('landingShown');
 
-  // Prevent scroll while landing is visible
+  if (landingShown) {
+    // If landing has already been shown, skip it entirely
+    if (landing) landing.remove(); // remove to avoid layout flash
+    homepage.classList.remove('hidden');
+    document.body.style.overflow = '';
+    return;
+  }
+
+  // Show landing only on first visit
+  landing.classList.add('visible');
+  homepage.classList.add('hidden');
   document.body.style.overflow = 'hidden';
 
-  // Clicking the button reveals homepage
+  // Handle Enter button click
   enterBtn.addEventListener('click', () => {
+    landing.classList.remove('visible');
     landing.classList.add('hidden');
-    homepage.classList.remove('hidden');
 
-    // Enable scroll
-    document.body.style.overflow = '';
-
-    // Add gentle entrance animation to homepage
-    homepage.classList.add('breeze-in');
-    setTimeout(() => {
-      homepage.classList.remove('breeze-in');
-    }, 1500);
-  });
-
-  // Optional: show landing only once per session
-  if (sessionStorage.getItem('landingShown')) {
-    landing.classList.add('hidden');
     homepage.classList.remove('hidden');
     document.body.style.overflow = '';
-  } else {
     sessionStorage.setItem('landingShown', 'true');
-  }
+
+    // Gentle fade-in animation
+    homepage.classList.add('breeze-in');
+    setTimeout(() => homepage.classList.remove('breeze-in'), 1500);
+
+    // Clean up DOM after fade
+    setTimeout(() => landing.remove(), 700);
+  });
 });
