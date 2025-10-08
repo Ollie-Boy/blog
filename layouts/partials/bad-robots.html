@@ -1,6 +1,0 @@
-{{- $robots := .robots -}}  <!-- Receive the robots data from the main template -->
-{{- range $botname, $_ := $robots }}
-User-agent: {{ $botname }}
-{{- end }}
-Disallow: /
-# Bad bots bundled by https://github.com/ai-robots-txt/ai.robots.txt
