@@ -1,26 +1,25 @@
 #backToTopButton {
-    background-color: #f8f8f8; /* visible and minimal */
-    border: 2px solid #ccc;
-    border-radius: 50%; /* cute round button */
-    width: 80px; /* bigger on desktop */
+    background: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    width: 80px;
     height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
     bottom: 30px;
-    right: 30px;
+    right: 60px;
     z-index: 9999;
     cursor: pointer;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.2); /* playful shadow */
     animation: floatUpDown 3s ease-in-out infinite;
     font-family: "Patrick Hand SC", sans-serif;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 #backToTopButton:hover {
     transform: translateY(-8px) rotate(-12deg) scale(1.15);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
 #backToTopButton:active {
@@ -30,17 +29,15 @@
 #backToTopButton svg {
     width: 60%;
     height: 60%;
-    fill: #333; /* visible arrow */
+    fill: #333;
     animation: arrowWiggle 1.5s ease-in-out infinite;
 }
 
-/* Floating motion for button */
 @keyframes floatUpDown {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
 }
 
-/* Silly wiggle for arrow */
 @keyframes arrowWiggle {
     0%, 100% { transform: rotate(0deg); }
     15% { transform: rotate(15deg); }
@@ -51,13 +48,8 @@
     90% { transform: rotate(-3deg); }
 }
 
-/* Dark mode */
+/* Dark mode arrow color */
 @media (prefers-color-scheme: dark) {
-    #backToTopButton {
-        background-color: #333;
-        border: 2px solid #555;
-        box-shadow: 0 6px 15px rgba(0,0,0,0.4);
-    }
     #backToTopButton svg {
         fill: #fff;
     }
@@ -69,6 +61,6 @@
         width: 60px;
         height: 60px;
         bottom: 15px;
-        right: 15px;
+        right: 25px;
     }
 }

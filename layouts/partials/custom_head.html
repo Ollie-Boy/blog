@@ -2,32 +2,28 @@
 <script type='text/javascript' src='{{ "js/lightbox.js" | relURL }}'></script>
 
 <!-- Back to Top Button -->
-<script src='{{ "js/vanilla-back-to-top.min.js" | relURL }}'></script>
+<script src='{{ "js/vanilla-back-to-top.min.js" | absURL }}'></script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     addBackToTop({
         id: 'backToTopButton',
-        backgroundColor: '#f8f8f8',
+        backgroundColor: 'transparent',
         textColor: '#333',
         size: 100,
         scrollDuration: 777,
         innerElement: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 14l5-5 5 5H7z" fill="currentColor"/></svg>',
-        cornerOffset: 50 // initial distance from bottom & right
+        cornerOffset: 50
     });
 
     const btn = document.getElementById('backToTopButton');
     if (!btn) return;
 
-    // Move button more to the left
-    btn.style.right = '150px'; // increase distance from the right
-
-    // Style for cute, silly effect
+    btn.style.right = '150px';
     btn.style.borderRadius = '50%';
     btn.style.boxShadow = '0 8px 20px rgba(0,0,0,0.25)';
     btn.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
     btn.style.fontFamily = '"Patrick Hand SC", sans-serif';
 
-    // Floating animation
     btn.animate(
         [
             { transform: 'translateY(0)' },
@@ -41,7 +37,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     );
 
-    // Arrow wiggle
     const svg = btn.querySelector('svg');
     if (svg) {
         svg.animate(
@@ -62,7 +57,6 @@ document.addEventListener('DOMContentLoaded', function () {
         );
     }
 
-    // Optional: responsive adjustment
     function resizeButton() {
         if (window.innerWidth <= 768) {
             btn.style.width = '60px';
