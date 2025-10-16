@@ -5,7 +5,7 @@ title = "Hello :D"
 Hi, I'm **Li Xiang**, my friends also call me **Ollie**.  
 {{< sidenote `
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="/images/bird_dark.png" width="80" height="80" align="right">
+  <source media="(prefers-color-scheme: dark)" srcset="/images/bird_dark.png" width="80" height="80">
   <img alt="Gorgeous, delightful, fantastic, elegant, handsome, and cute me." src="/images/bird.png" width="80" height="80" align="right">
 </picture>
 ` right >}}

@@ -4,7 +4,7 @@ Otherwise sidenotes may appear off-screen.
 */
 
 .sidenote {
-  display: inline-block;
+  display: inherit;
 }
 
 .sidenote-note {
