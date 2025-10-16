@@ -2,6 +2,11 @@
 Make sure your main content container has position: relative;
 Otherwise sidenotes may appear off-screen.
 */
+
+.sidenote {
+  display: inline-block;
+}
+
 .sidenote-note {
   background-color: transparent;
   border: solid 1px;
@@ -10,6 +15,10 @@ Otherwise sidenotes may appear off-screen.
   padding: 0.8rem;
 }
 
+.sidenote:hover {
+  background-color: #00BFFF;
+  transition: background-color 0.2s ease;
+}
 .sidenote:hover .sidenote-label {
   text-decoration: none;
 }
@@ -53,12 +62,18 @@ Otherwise sidenotes may appear off-screen.
 
 /* ========== MOBILE ========== */
 @media screen and (max-width: 960px) {
+
+  .sidenote {
+    display: block;
+    background-color: transparent !important;
+  }
+
   .sidenote-content {
     position: static;
     margin-top: 10px;
     margin-bottom: 10px;
     max-width: 100%;
-    display: none;
+    display: none; /* <-- hidden by default */
   }
 
   .sidenote-checkbox:checked ~ .sidenote-content {
@@ -76,6 +91,10 @@ Otherwise sidenotes may appear off-screen.
 
 /* ========== DARK MODE ========== */
 @media (prefers-color-scheme: dark) {
+
+  .sidenote:hover {
+    background-color: #666;
+  }
 
   .sidenote:hover .sidenote-label {
     text-decoration: none;
