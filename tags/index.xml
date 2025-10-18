@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Breezeden</title>
+    <link>https://lixiang.dev/tags/</link>
+    <description>Recent content in Tags on Breezeden</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <managingEditor>bird@lixiang.dev (Li Xiang)</managingEditor>
+    <webMaster>bird@lixiang.dev (Li Xiang)</webMaster>
+    <copyright>Copyright © {{ now.Format &#34;2006&#34; }} Li Xiang.</copyright>
+    <lastBuildDate>Sat, 04 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://lixiang.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo</title>
+      <link>https://lixiang.dev/tags/hugo/</link>
+      <pubDate>Sat, 04 Oct 2025 00:00:00 +0000</pubDate><author>bird@lixiang.dev (Li Xiang)</author>
+      <guid>https://lixiang.dev/tags/hugo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Life</title>
+      <link>https://lixiang.dev/tags/life/</link>
+      <pubDate>Sat, 04 Oct 2025 00:00:00 +0000</pubDate><author>bird@lixiang.dev (Li Xiang)</author>
+      <guid>https://lixiang.dev/tags/life/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Perosonalize</title>
+      <link>https://lixiang.dev/tags/perosonalize/</link>
+      <pubDate>Sat, 04 Oct 2025 00:00:00 +0000</pubDate><author>bird@lixiang.dev (Li Xiang)</author>
+      <guid>https://lixiang.dev/tags/perosonalize/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Random</title>
+      <link>https://lixiang.dev/tags/random/</link>
+      <pubDate>Sat, 04 Oct 2025 00:00:00 +0000</pubDate><author>bird@lixiang.dev (Li Xiang)</author>
+      <guid>https://lixiang.dev/tags/random/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dev</title>
+      <link>https://lixiang.dev/tags/dev/</link>
+      <pubDate>Wed, 26 Mar 2025 00:00:00 +0000</pubDate><author>bird@lixiang.dev (Li Xiang)</author>
+      <guid>https://lixiang.dev/tags/dev/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Friend</title>
+      <link>https://lixiang.dev/tags/friend/</link>
+      <pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate><author>bird@lixiang.dev (Li Xiang)</author>
+      <guid>https://lixiang.dev/tags/friend/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Holiday</title>
+      <link>https://lixiang.dev/tags/holiday/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate><author>bird@lixiang.dev (Li Xiang)</author>
+      <guid>https://lixiang.dev/tags/holiday/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>New Year</title>
+      <link>https://lixiang.dev/tags/new-year/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate><author>bird@lixiang.dev (Li Xiang)</author>
+      <guid>https://lixiang.dev/tags/new-year/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Xmas</title>
+      <link>https://lixiang.dev/tags/xmas/</link>
+      <pubDate>Wed, 25 Dec 2024 00:00:00 +0000</pubDate><author>bird@lixiang.dev (Li Xiang)</author>
+      <guid>https://lixiang.dev/tags/xmas/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

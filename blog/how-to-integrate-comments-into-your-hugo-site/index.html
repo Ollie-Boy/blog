@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="https://lixiang.dev/favicon/dark/favicon.ico" media="(prefers-color-scheme:dark)">
+
+
+<link rel="icon" href="https://lixiang.dev/favicon/light/favicon.ico" media="(prefers-color-scheme:light)">
+<link rel="icon" href="https://lixiang.dev/favicon/light/favicon.ico" media="(prefers-color-scheme:no-preference)">
+<title>How to Integrate Comments into Your Hugo Site | Breezeden</title>
+<meta name="title" content="How to Integrate Comments into Your Hugo Site" />
+<meta name="description" content="A tutorial for integrating comment" />
+<meta name="keywords" content="Hugo,dev," />
+
+
+<meta property="og:url" content="https://lixiang.dev/blog/how-to-integrate-comments-into-your-hugo-site/">
+  <meta property="og:site_name" content="Breezeden">
+  <meta property="og:title" content="How to Integrate Comments into Your Hugo Site">
+  <meta property="og:description" content="A tutorial for integrating comment">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2024-10-29T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-10-29T00:00:00+00:00">
+    <meta property="article:tag" content="Hugo">
+    <meta property="article:tag" content="Dev">
+    <meta property="og:image" content="https://lixiang.dev/images/Koshiro.jpg">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://lixiang.dev/images/Koshiro.jpg">
+  <meta name="twitter:title" content="How to Integrate Comments into Your Hugo Site">
+  <meta name="twitter:description" content="A tutorial for integrating comment">
+
+
+
+
+  <meta itemprop="name" content="How to Integrate Comments into Your Hugo Site">
+  <meta itemprop="description" content="A tutorial for integrating comment">
+  <meta itemprop="datePublished" content="2024-10-29T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2024-10-29T00:00:00+00:00">
+  <meta itemprop="wordCount" content="650">
+  <meta itemprop="image" content="https://lixiang.dev/images/Koshiro.jpg">
+  <meta itemprop="keywords" content="Hugo,Dev">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+    <style>
+  @import url('/css/alert.css');
+  @import url('/css/background.css');
+  @import url('/css/back-to-top-button.css');
+  @import url('/css/badge.css');
+  @import url('/css/color.css');
+  @import url('/css/collapsible.css');
+  @import url('/css/image-gallery.css');
+  @import url('/css/lightbox.css');
+  @import url('/css/sidenote.css');
+  @import url('/css/landing.css');
+  @import url(https://fonts.googleapis.com/css?family=Neucha|Patrick+Hand+SC);
+  @import url(https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap);
+
+  body {
+    overflow-x: hidden;
+    background-image: url("/images/geometry_light.png");
+    font-family: "Neucha", sans-serif;
+    font-size: 1.25rem;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #333;
+    height: 94vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  a {
+    color: #3273dc;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+  }
+
+  a:hover {
+    transform: scale(1.15);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  b {
+    font-family: "Patrick Hand SC", sans-serif;
+  }
+
+  th {
+    font-family: "Patrick Hand SC", sans-serif;
+    font-size: 1.5rem;
+    border: 1px solid #333;
+    padding: 2%;
+  }
+
+  td {
+    font-family: "Neucha", sans-serif;
+    font-size: 1.25rem;
+    border: 1px solid #333;
+    padding: 1%;
+  }
+
+  table {
+    border-collapse: collapse;
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 2.215em;
+  }
+
+  h2 {
+    font-size: 1.875em;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+  h4 {
+    font-size: 1.25em;
+  }
+
+  h5 {
+    font-size: 1.125em;
+  }
+
+  h6 {
+    font-size: 1em;
+  }
+
+  .title {
+    color: #222;
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  nav {
+    margin: auto 0;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    font-family: "Neucha", sans-serif;
+    padding: 2px 5px;
+    background-color: #b5e4ff;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    font-size: 1.25rem;
+    background-color: #082f49;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    margin-top: auto;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  .tag {
+    display: inline-block;
+    margin-right: 10px;
+    padding-top: 5px;
+    padding-right: 10px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: 0.3s ease, transform 0.3s ease;
+  }
+
+  .back-to-lists {
+    display: inline-block;
+    text-decoration: none;
+    transition: 0.3s ease, transform 0.3s ease;
+  }
+
+  .back-to-lists:hover {
+    transform: scale(1.15);
+    cursor: pointer;
+  }
+
+  .menu-link,
+  .rss-link,
+  .contact-link {
+    display: inline-block;
+    text-decoration: none;
+    transition: 0.3s ease, transform 0.3s ease;
+  }
+
+  .menu-link:hover,
+  .rss-link:hover,
+  .contact-link:hover {
+    transform: scale(1.15); 
+    cursor: pointer;
+  }
+
+  .menu-link:active,
+  .rss-link:active,
+  .contact-link:active {
+    transform: scale(0.98);
+  }
+
+  .katex,
+  .katex-html,
+  .katex-mathml,
+  .katex-display,
+  .katex span {
+    font-family: "Patrick Hand", sans-serif !important;
+  }
+
+  .katex .mord {
+    font-family: "Patrick Hand", sans-serif !important;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-image: url("/images/geometry_dark.png");
+      background-color: #333;
+      color: #ddd;
+    }
+
+    .title {
+      color: #ddd;
+      text-decoration: none;
+      border: 0;
+    }
+
+    th {
+      border: 1px solid #ddd;
+    }
+
+    td {
+      border: 1px solid #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+  .toc {
+    border: 2px solid;
+    padding: 1rem;
+    margin-top: 1rem;
+    font-family: "Patrick Hand SC", sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .toc-title {
+    font-family: "Patrick Hand SC", sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .toc ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .toc li {
+    font-size: 1.4rem;
+  }
+
+  .toc a {
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    .toc {
+      width: 100%;
+      padding: 1rem;
+    }
+  }
+
+  .pagination-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .pagination-prev,
+  .pagination-next {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .pagination-prev:focus,
+  .pagination-next:focus {
+    transform: scale(1.15);
+  }
+
+</style>
+
+<script type='text/javascript' src='/js/lightbox.js'></script>
+
+
+<script src='https://lixiang.dev/js/vanilla-back-to-top.min.js'></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    addBackToTop({
+        id: 'backToTopButton',
+        backgroundColor: 'transparent',
+        textColor: '#333',
+        size: 100,
+        scrollDuration: 777,
+        innerElement: '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 14l5-5 5 5H7z" fill="currentColor"/></svg>',
+        cornerOffset: 50
+    });
+
+    const btn = document.getElementById('backToTopButton');
+    if (!btn) return;
+
+    btn.style.right = '150px';
+    btn.style.borderRadius = '50%';
+    btn.style.boxShadow = '0 8px 20px rgba(0,0,0,0.25)';
+    btn.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+    btn.style.fontFamily = '"Patrick Hand SC", sans-serif';
+
+    btn.animate(
+        [
+            { transform: 'translateY(0)' },
+            { transform: 'translateY(-12px)' },
+            { transform: 'translateY(0)' }
+        ],
+        {
+            duration: 3000,
+            iterations: Infinity,
+            easing: 'ease-in-out'
+        }
+    );
+
+    const svg = btn.querySelector('svg');
+    if (svg) {
+        svg.animate(
+            [
+                { transform: 'rotate(0deg)' },
+                { transform: 'rotate(15deg)' },
+                { transform: 'rotate(-12deg)' },
+                { transform: 'rotate(10deg)' },
+                { transform: 'rotate(-8deg)' },
+                { transform: 'rotate(5deg)' },
+                { transform: 'rotate(0deg)' }
+            ],
+            {
+                duration: 1500,
+                iterations: Infinity,
+                easing: 'ease-in-out'
+            }
+        );
+    }
+
+    function resizeButton() {
+        if (window.innerWidth <= 768) {
+            btn.style.width = '60px';
+            btn.style.height = '60px';
+            btn.style.right = '20px'; 
+        } else {
+            btn.style.width = '100px';
+            btn.style.height = '100px';
+            btn.style.right = '150px'; 
+        }
+    }
+    window.addEventListener('resize', resizeButton);
+    resizeButton(); 
+});
+
+</script>
+
+
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/katex@0.16.19/dist/katex.min.css' integrity='sha384-7lU0muIg/i1plk7MgygDUp3/bNRA65orrBub4/OSWHECgwEsY83HaS1x3bljA/XV' crossorigin='anonymous'>
+<script defer src='https://cdn.jsdelivr.net/npm/katex@0.16.19/dist/katex.min.js' integrity='sha384-RdymN7NRJ+XoyeRY4185zXaxq9QWOOx3O7beyyrRK4KQZrPlCDQQpCu95FoCGPAE' crossorigin='anonymous'></script>
+<script defer src='https://cdn.jsdelivr.net/npm/katex@0.16.19/dist/contrib/auto-render.min.js' integrity='sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh' crossorigin='anonymous' onload='renderMathInElement(document.body);'></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    renderMathInElement(document.body, {
+        delimiters: [
+            { left: '$$', right: '$$', display: true },
+            { left: '$', right: '$', display: false },
+            { left: '\\(', right: '\\)', display: false },
+            { left: '\\[', right: '\\]', display: true }
+        ]
+    });
+});
+</script>
+
+
+
+
+<link rel="stylesheet" href="/css/clock.css">
+<script src="/js/clock.js"></script>
+</head>
+
+  <body>
+    
+    <div id="landing">
+      <div class="landing-content">
+        <h1>Welcome to Breezeden</h1>
+        <button id="enter-btn">Enter</button>
+      </div>
+
+      
+      <div class="airplane-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" fill="none" viewBox="0 0 96 96" class="airplane">
+          <path fill="#12182B" fill-rule="evenodd" d="M90.853 6.9457C91.6138 7.47412 92.0201 8.37989 91.9087 9.29947L84.3668 71.5938C84.2808 72.3037 83.895 72.9428 83.3068 73.3496C82.7187 73.7563 81.9845 73.8917 81.2899 73.7215L61.0844 68.7706L47.3677 86.9328C46.8371 87.6353 45.9761 88.007 45.101 87.9113C44.2259 87.8157 43.4655 87.2667 43.0993 86.4662L31.9598 62.1162L3.71098 55.4455C2.69296 55.2051 1.93223 54.3563 1.8043 53.3182C1.67637 52.28 2.20829 51.272 3.13749 50.7916L88.2788 6.77818C89.1017 6.35281 90.0923 6.41727 90.853 6.9457ZM36.7553 60.5797L43.9185 76.2379L45.4845 62.6957C45.5365 62.2461 45.7095 61.819 45.9852 61.4601L70.0725 30.0959L36.7553 60.5797ZM73.8423 19.8696L11.4335 52.1316L33.0123 57.2273L73.8423 19.8696ZM85.8474 17.7643L52.2846 61.4666L79.7418 68.1943L85.8474 17.7643ZM50.1258 66.0855L55.7971 67.4751L48.9107 76.5932L50.1258 66.0855Z" clip-rule="evenodd"></path>
+        </svg>
+      </div>
+    </div>
+
+    
+    <script src="/js/landing.js"></script>
+    <div id="homepage-wrapper" class="hidden">
+      <header><h2>
+<a href="/" class="title">
+  Breezeden
+</a>
+</h2>
+
+
+<div id="hanging-clock">
+  <div class="string"></div>
+  <div class="clock-body">
+    🪶 <span id="clock-time">--:--:--</span>
+  </div>
+</div>
+
+
+<nav>
+
+  <a class="menu-link" href="/blog/">Blog</a>
+
+
+<a class="rss-link" href="/index.xml">RSS</a>
+<a class="contact-link" href="mailto:bird@lixiang.dev">Contact</a>
+</nav>
+</header>
+
+      <main>
+
+<h1>How to Integrate Comments into Your Hugo Site</h1>
+<p>
+  <i>
+    <time datetime='2024-10-29' pubdate>
+      29 Oct, 2024
+    </time>
+  </i>
+</p>
+
+<content>
+
+  
+
+  
+  <div class="toc">
+    <div class="toc-title">Table of Contents</div>
+      <ol>
+      
+        <li>
+          
+          
+          
+          
+          <a href="#disqus">
+            Disqus
+          </a>
+          </li>
+      
+        <li>
+          
+          
+          
+          
+          <a href="#giscus">
+            Giscus
+          </a>
+          </li>
+      
+    </ol>
+  </div>
+  
+
+  <p>Someday you suddenly think it is so alone in your webpage and you want others can leave their comment here, so you opened
+
+<a href="https://gohugo.io/content-management/comments/" target="_blank" rel="noreferrer noopener">
+    Hugo&rsquo;s Quick Reference
+  </a>, and you find this:</p>
+<blockquote>
+<p>Hugo ships with an internal Disqus template, but this isn&rsquo;t the only commenting system that will work with your new Hugo
+website.</p>
+</blockquote>
+<p>But when you search with Google, DuckDuckGo, or any engine else, you may find most people would suggest you use
+giscus but Disqus for your blog&rsquo;s comments, so you may wanna know the differences between them. But wait, this is not
+what this article&rsquo;s aim is. In this article, I will show you how to integrate a comment module but not compare them, only
+experience it yourself, can you find which is more suit for you.</p>
+<p>Note that I prefer to use 
+<a href="https://gohugo.io/templates/partial/" target="_blank" rel="noreferrer noopener">
+    Hugo partial template
+  </a> since that can keep your file structure clean, so I will use the template in the tutorial.</p>
+<h2 id="disqus">Disqus</h2>
+<p>First, let&rsquo;s look at the 
+<a href="https://disqus.com/" target="_blank" rel="noreferrer noopener">
+    Disqus
+  </a>.</p>
+<p>Actually hugo comes with all the code you need to load Disqus. Before adding Disqus to your site, you&rsquo;ll need to
+
+<a href="https://disqus.com/profile/signup/" target="_blank" rel="noreferrer noopener">
+    set up an account
+  </a>. Then go to <em>AddDisqusToSite</em> and click Get Started.</p>
+<p>Note that you should remember the <strong>SHORTNAME</strong> you input since this shortname will appear later on as a variable in your
+<code>config.yml</code> or <code>config.toml</code>.</p>
+<p>Keep moving and fill in the form details for your site, after finishing you will obtain a template like this, create a file named <code>disqus.html</code> in <code>/layouts/partials</code> and paste it.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;disqus_thread&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    var disqus_config = function () {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page&#39;s canonical URL variable
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page&#39;s unique identifier variable
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    };
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    */</span>
+</span></span><span style="display:flex;"><span>    (<span style="color:#66d9ef">function</span>() { <span style="color:#75715e">// DON&#39;T EDIT BELOW THIS LINE
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">d</span> <span style="color:#f92672">=</span> document, <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;script&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://YOUR-SHORT-NAME.disqus.com/embed.js&#39;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">setAttribute</span>(<span style="color:#e6db74">&#39;data-timestamp&#39;</span>, <span style="color:#f92672">+</span><span style="color:#66d9ef">new</span> Date());
+</span></span><span style="display:flex;"><span>    (<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">head</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">body</span>).<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">s</span>);
+</span></span><span style="display:flex;"><span>    })();
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">noscript</span>&gt;Please enable JavaScript to view the &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://disqus.com/?ref_noscript&#34;</span>&gt;comments powered by Disqus.&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">noscript</span>&gt;
+</span></span></code></pre></div><p>Then add the partial in the footer of the post template, for me it is in <code>/layouts/posts/single.html</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{{ .<span style="color:#a6e22e">Content</span> }}
+</span></span><span style="display:flex;"><span>{{ <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;disqus.html&#34;</span> . }}
+</span></span><span style="display:flex;"><span>{{ <span style="color:#a6e22e">end</span> }}
+</span></span></code></pre></div><p>Here we come to the last step, add below code inside your <code>config.yml</code> or <code>config.toml</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">disqus</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">shortname</span>: <span style="color:#ae81ff">your-disqus-shortname</span>
+</span></span></code></pre></div><p>Congrats, now it is all finished. &#x1f60a;</p>
+<h2 id="giscus">Giscus</h2>
+<p>First of all, we need to go to 
+<a href="https://giscus.app/" target="_blank" rel="noreferrer noopener">
+    Giscus
+  </a> to make your own configuration. When you finished, you will get a code like this, just save it so we can use later.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://giscus.app/client.js&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data-repo</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;[ENTER REPO HERE]&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data-repo-id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;[ENTER REPO ID HERE]&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data-category</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;[ENTER CATEGORY NAME HERE]&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data-category-id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;[ENTER CATEGORY ID HERE]&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data-mapping</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pathname&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data-strict</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data-reactions-enabled</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data-emit-metadata</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data-input-position</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bottom&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data-theme</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;preferred_color_scheme&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">data-lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">crossorigin</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;anonymous&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">async</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><p>And then, we need to create a partial template named <code>giscus.html</code> in <code>../layout/partials/</code>, and paste the code below into the file.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{{<span style="color:#f92672">-</span> <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">isset</span> .<span style="color:#a6e22e">Site</span>.<span style="color:#a6e22e">Params</span> <span style="color:#e6db74">&#34;giscus&#34;</span> <span style="color:#f92672">-</span>}}
+</span></span><span style="display:flex;"><span>  {{<span style="color:#f92672">-</span> <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">and</span> (<span style="color:#a6e22e">isset</span> .<span style="color:#a6e22e">Site</span>.<span style="color:#a6e22e">Params</span>.<span style="color:#a6e22e">giscus</span> <span style="color:#e6db74">&#34;repo&#34;</span>) (<span style="color:#a6e22e">not</span> (<span style="color:#a6e22e">eq</span> .<span style="color:#a6e22e">Site</span>.<span style="color:#a6e22e">Params</span>.<span style="color:#a6e22e">giscus</span>.<span style="color:#a6e22e">repo</span> <span style="color:#e6db74">&#34;&#34;</span> )) (<span style="color:#a6e22e">eq</span> (.<span style="color:#a6e22e">Params</span>.<span style="color:#a6e22e">disable_comments</span> | <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">false</span>) <span style="color:#66d9ef">false</span>) <span style="color:#f92672">-</span>}}
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#a6e22e">script</span> <span style="color:#a6e22e">src</span>=<span style="color:#e6db74">&#34;https://giscus.app/client.js&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">data</span><span style="color:#f92672">-</span><span style="color:#a6e22e">repo</span>=<span style="color:#e6db74">&#34;{{ .Site.Params.giscus.repo }}&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">data</span><span style="color:#f92672">-</span><span style="color:#a6e22e">repo</span><span style="color:#f92672">-</span><span style="color:#a6e22e">id</span>=<span style="color:#e6db74">&#34;{{ .Site.Params.giscus.repoID }}&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">data</span><span style="color:#f92672">-</span><span style="color:#a6e22e">category</span>=<span style="color:#e6db74">&#34;{{ .Site.Params.giscus.category }}&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">data</span><span style="color:#f92672">-</span><span style="color:#a6e22e">category</span><span style="color:#f92672">-</span><span style="color:#a6e22e">id</span>=<span style="color:#e6db74">&#34;{{ .Site.Params.giscus.categoryID }}&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">data</span><span style="color:#f92672">-</span><span style="color:#a6e22e">mapping</span>=<span style="color:#e6db74">&#34;{{ default &#34;</span><span style="color:#a6e22e">pathname</span><span style="color:#e6db74">&#34; .Site.Params.giscus.mapping }}&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">data</span><span style="color:#f92672">-</span><span style="color:#a6e22e">reactions</span><span style="color:#f92672">-</span><span style="color:#a6e22e">enabled</span>=<span style="color:#e6db74">&#34;{{ default &#34;</span><span style="color:#ae81ff">1</span><span style="color:#e6db74">&#34; .Site.Params.giscus.reactionsEnabled }}&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">data</span><span style="color:#f92672">-</span><span style="color:#a6e22e">emit</span><span style="color:#f92672">-</span><span style="color:#a6e22e">metadata</span>=<span style="color:#e6db74">&#34;{{ default &#34;</span><span style="color:#ae81ff">0</span><span style="color:#e6db74">&#34; .Site.Params.giscus.emitMetadata }}&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">data</span><span style="color:#f92672">-</span><span style="color:#a6e22e">input</span><span style="color:#f92672">-</span><span style="color:#a6e22e">position</span>=<span style="color:#e6db74">&#34;{{ default &#34;</span><span style="color:#a6e22e">bottom</span><span style="color:#e6db74">&#34; .Site.Params.giscus.inputPosition }}&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">data</span><span style="color:#f92672">-</span><span style="color:#a6e22e">theme</span>=<span style="color:#e6db74">&#34;{{ default &#34;</span><span style="color:#a6e22e">light</span><span style="color:#e6db74">&#34; .Site.Params.giscus.theme }}&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">data</span><span style="color:#f92672">-</span><span style="color:#a6e22e">lang</span>=<span style="color:#e6db74">&#34;{{ default &#34;</span><span style="color:#a6e22e">en</span><span style="color:#e6db74">&#34; .Site.Params.giscus.lang }}&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">data</span><span style="color:#f92672">-</span><span style="color:#a6e22e">loading</span>=<span style="color:#e6db74">&#34;{{ default &#34;</span><span style="color:#a6e22e">lazy</span><span style="color:#e6db74">&#34; .Site.Params.giscus.loading }}&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">crossorigin</span>=<span style="color:#e6db74">&#34;anonymous&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">async</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">script</span>&gt;
+</span></span><span style="display:flex;"><span>  {{<span style="color:#f92672">-</span> <span style="color:#a6e22e">end</span> <span style="color:#f92672">-</span>}}
+</span></span><span style="display:flex;"><span>{{<span style="color:#f92672">-</span> <span style="color:#a6e22e">end</span> <span style="color:#f92672">-</span>}}
+</span></span></code></pre></div><p>Same with before, add the partial in the footer of the post template in <code>/layouts/posts/single.html</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>{{ .<span style="color:#a6e22e">Content</span> }}
+</span></span><span style="display:flex;"><span>{{ <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;giscus.html&#34;</span> . }}
+</span></span><span style="display:flex;"><span>{{ <span style="color:#a6e22e">end</span> }}
+</span></span></code></pre></div><p>Finally, we can configure the params in the <code>config.yml</code> or <code>config.toml</code> as below, just input the params we got in the first step, and enjoy. &#x1f604;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span>  <span style="color:#f92672">giscus</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">repo</span>: <span style="color:#e6db74">&#34;YOUR REPO&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">repoID</span>: <span style="color:#e6db74">&#34;YOUR REPOID&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">category</span>: <span style="color:#e6db74">&#34;CATEGORY&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">categoryID</span>: <span style="color:#e6db74">&#34;CATEGORYID&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">mapping</span>: <span style="color:#e6db74">&#34;pathname&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">reactionsEnabled</span>: <span style="color:#e6db74">&#34;1&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">emitMetadata</span>: <span style="color:#e6db74">&#34;0&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">inputPosition</span>: <span style="color:#e6db74">&#34;bottom&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">theme</span>: <span style="color:#e6db74">&#34;preferred_color_scheme&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">lang</span>: <span style="color:#e6db74">&#34;en&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">loading</span>: <span style="color:#e6db74">&#34;lazy&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">crossorigin</span>: <span style="color:#e6db74">&#34;anonymous&#34;</span>
+</span></span></code></pre></div>
+  <p>
+    <a class="back-to-lists" href="/blog">Back to Lists</a>
+  </p>
+</content>
+<p>
+  
+  <a class="tag" href="https://lixiang.dev/tags/hugo/">#Hugo</a>
+  
+  <a class="tag" href="https://lixiang.dev/tags/dev/">#Dev</a>
+  
+</p>
+
+      </main>  
+    <script src="/js/clipboard.js"></script>
+    <link rel="stylesheet" href="/css/clipboard.css">
+</div>
+  </body>
+
+  <footer><i>Dear wind, please take me fly</i>
+<br />
+Copyright &copy; 2025 Li Xiang 
+ · 
+Based on <a href="https://bearblog.dev/" target="_blank">Bear ʕ•ᴥ•ʔ Blog</a>
+
+
+</footer>
+</html>

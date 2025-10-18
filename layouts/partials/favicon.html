@@ -1,7 +1,0 @@
-{{ with .Site.Params.favicon_dark }}
-<link rel="icon" href="{{ . | absURL }}" media="(prefers-color-scheme:dark)">
-{{ end }}
-{{ with .Site.Params.favicon }}
-<link rel="icon" href="{{ . | absURL }}" media="(prefers-color-scheme:light)">
-<link rel="icon" href="{{ . | absURL }}" media="(prefers-color-scheme:no-preference)">
-{{ end }}
